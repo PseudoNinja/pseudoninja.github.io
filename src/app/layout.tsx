@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Applicaiton } from "./app";
 import HeroImage from "@/components/HeroImage";
+import Button from "@/components/Button";
 
 const app = new Applicaiton();
 
@@ -20,9 +21,9 @@ export default function RootLayout({
             <body className="flex justify-center overflow-hidden">
                 <div
                     id="container"
-                    className="w-5/6 md:w-1/2 flex flex-col overscroll-none"
+                    className="w-full h-screen flex flex-col content-center overscroll-none"
                 >
-                    <header className="p-4">
+                    <header className="grow-0 p-4 bg-sky-500 text-white border-collapse border-none">
                         <h1 id="site-title" className="hidden">
                             {app.title}
                         </h1>
@@ -33,7 +34,14 @@ export default function RootLayout({
                             {app.welcome}
                         </span>
                     </header>
-                    <main className="">{children}</main>
+                    <main className="grow">{children}</main>
+                    <footer
+                        id="dashhboard-footer"
+                        className="grow-0 p-4 bg- flex justfiy-center"
+                    >
+                        [Footer]
+                        {/* <Button title="Call Me" OnClick="call()" /> */}
+                    </footer>
                 </div>
             </body>
         </html>

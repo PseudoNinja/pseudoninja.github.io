@@ -3,39 +3,43 @@
 @tailwind utilities;
 
 :root {
-    --foreground-rgb: 33, 33, 33;
-    --background-rgb: 229, 231, 235;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
+    /* THEME */
+    --antiflash-white-hex: #ebebebff; /* gallary-100 */
+    --ghost-white-hex: #f8f8ffff; /* white-lilac-50 */
+    --picton-blue-hex: #0ea5e9ff; /* picton-blue-500 */
+    --picton-blue-alt-hex: #0370a1; /* picton-blue-700 */
+    --charcoal-hex: #474954ff; /* mako-700 */
+    --rusty-red-hex: #d62246ff; /* crimson-600 */
+    --rust-red-alt-hex: #9b1638; /* crimson-800 */
+    --night-hex: #090a0bff; /* cod-gray-950 */
+    --night-alt-hex: #383d41ff; /* cod-gray-900 */
 
-    --primary-rgb: 0, 0, 153;
-    --primary-alt-rgb: 16, 35, 203;
-    --secondary-rgb: 203, 184, 16;
-    --secondary-alt-rgb: 255, 234, 88;
+    --foreground-hex: var(--night-hex);
+    --background-hex: var(--antiflash-white-hex);
+    --primary-hex: var(--picton-blue-hex);
+    --secondary-hex: var(--rusty-red-hex);
+    --panel-hex: var(--ghost-white-hex);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
-        --foreground-rgb: 229, 231, 235;
-        --foreground-rgb: 229, 231, 235;
-        --background-rgb: 15, 15, 15;
-        --background-start-rgb: 0, 0, 15;
-        --background-end-rgb: var(--background-rgb);
+        --foreground-hex: var(--antiflash-white-hex);
+        --background-hex: var(--night-alt-hex);
+        --primary-hex: var(--picton-blue-alt-hex);
+        --secondary-hex: var(--rusty-red-alt-hex);
+        --panel-hex: var(--night-hex);
     }
-}
+} */
 
 body {
-    color: rgb(var(--foreground-rgb));
-    background-color: rgb(var(--background-rgb));
+    color: var(--foreground-hex);
+    background-color: var(--background-hex);
 }
 
 h1,
-h3,
-h5 {
-    color: rgb(var(--primary-rgb));
-}
 h2,
+h3,
 h4,
-h6 {
-    color: rgb(var(--primary-alt-rgb));
+h5 {
+    color: var(--primary-hex);
 }
