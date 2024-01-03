@@ -1,6 +1,7 @@
 import HeroImage from "@/components/HeroImage";
 import Panel from "@/components/Panel";
 import SkillCloud from "@/components/SkillCloud";
+import WorkHistory from "@/components/WorkHistory";
 
 export default function HomePage() {
     return (
@@ -27,6 +28,9 @@ export default function HomePage() {
             </Panel>
             <Panel id="skills" title="What I Do">
                 <SkillCloud />
+            </Panel>
+            <Panel id="history" title="Where I've Been">
+                <WorkHistory />
             </Panel>
         </div>
     );
