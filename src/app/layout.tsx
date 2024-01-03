@@ -34,7 +34,7 @@ export default function RootLayout({
                             {app.welcome}
                         </span>
                     </header>
-                    <main className="grow">{children}</main>
+                    <main className="grow overflow-y-auto">{children}</main>
                     <footer
                         id="dashhboard-footer"
                         className="grow-0 p-4 bg- flex justfiy-center"

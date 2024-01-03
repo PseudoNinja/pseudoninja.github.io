@@ -1,22 +1,18 @@
 import HeroImage from "@/components/HeroImage";
+import Panel from "@/components/Panel";
+import SkillCloud from "@/components/SkillCloud";
 
 export default function HomePage() {
     return (
         <div id="homepage-container" className="flex flex-col border-none">
             <section
                 id="heroImage-wrapper"
-                className="bg-picton-blue-500 h-36 flex justify-center overflow-visible"
+                className="bg-picton-blue-500 h-36 flex justify-center overflow-visible mb-20"
             >
                 <HeroImage />
             </section>
-            <section
-                id="about"
-                className="mt-20 justify-center bg-white-lilac-50 border-1 shadow-sm border-mako-500 p-4 m-4 rounded-md"
-            >
-                <h2 className="text-picton-blue-500 text-4xl text-center mb-4">
-                    About Me
-                </h2>
-                <p className="mb-2">
+            <Panel id="about" title="Who I Am">
+                <p>
                     Eric Miller is a professional problem solver and people
                     leader from Omaha Nebraska. Eric has spent the last 20 years
                     working in varying capacities of web and application
@@ -28,7 +24,10 @@ export default function HomePage() {
                     Outside of the office Eric is a family man who enjoys the
                     outdoors, tinkering, video games, and gardening.
                 </p>
-            </section>
+            </Panel>
+            <Panel id="skills" title="What I Do">
+                <SkillCloud />
+            </Panel>
         </div>
     );
 }
