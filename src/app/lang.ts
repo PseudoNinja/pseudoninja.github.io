@@ -5,6 +5,9 @@ import { FileService } from "./file";
 export interface LanguageData {
     title: string;
     description: string;
+    tagline: string;
+    heroImage_alt: string;
+    welcome: string;
 }
 
 class LanguageDataService {
