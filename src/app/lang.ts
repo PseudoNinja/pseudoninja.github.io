@@ -9,13 +9,13 @@ export interface LanguageData {
 
 class LanguageDataService {
     static DEFAULT_LANGUAGE = "en-us";
-    static DATA_PATH = "../data/";
+    static DATA_PATH = "./data/";
 
-    data: LanguageData;
-
-    constructor(lang: string = LanguageDataService.DEFAULT_LANGUAGE) {
+    static GetLanguagePackFromFile(
+        lang: string = LanguageDataService.DEFAULT_LANGUAGE
+    ): LanguageData {
         let filepath = LanguageDataService.DATA_PATH + "lang." + lang + ".json";
-        this.data = <LanguageData>FileService.Parse(filepath);
+        return <LanguageData>FileService.Parse(filepath);
     }
 }
 

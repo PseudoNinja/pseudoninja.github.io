@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import { LanguageDataService } from "./lang";
+import { Applicaiton } from "./app";
 
-const inter = Inter({ subsets: ["latin"] });
-
-const lang: LanguageDataService = new LanguageDataService(navigator.language);
+const app = new Applicaiton();
 
 export const metadata: Metadata = {
-    title: lang.data.title, // 'Eric Miller - Professional Problem Solver & People Leader',
-    description: lang.data.description, //'Eric Miller is a professional problem solver and people leader from Omaha, Nebraska. Eric is a Full-stack developer with over 20 years of experience.',
+    title: app.title,
+    description: app.description,
 };
 
 export default function RootLayout({
@@ -18,8 +15,10 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang={navigator.language}>
-            <body className={inter.className}>{children}</body>
+        <html lang={app.language}>
+            <body className="justify-center">
+                <main>{children}</main>
+            </body>
         </html>
     );
 }
