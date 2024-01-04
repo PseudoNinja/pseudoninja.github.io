@@ -37,10 +37,12 @@ export default function RootLayout({
                     <main className="grow overflow-y-auto">{children}</main>
                     <footer
                         id="dashhboard-footer"
-                        className="grow-0 p-4 bg- flex justfiy-center"
+                        className="grow-0 p-4 bg-mako-700 flex justfiy-center rounded-t-lg"
                     >
-                        [Footer]
-                        {/* <Button title="Call Me" OnClick="call()" /> */}
+                        <button>LinkedIn</button>
+                        <button>Call Me</button>
+                        <button>GitHub</button>
+                        <button>Twitter</button>
                     </footer>
                 </div>
             </body>
