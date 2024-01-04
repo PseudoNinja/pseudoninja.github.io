@@ -1,69 +1,5 @@
 import { randomInt } from "crypto";
-
-const skills = [
-    "Leadership",
-    "Problem-Solving",
-    "Critical Thinking",
-    "Flexibility",
-    "Responsibility",
-    "People Management",
-    "Cost Analysis",
-    "SaaS Application Design",
-    "Thin-Client",
-    "N-Tier Architecture",
-    "Data Architecture",
-    "Scalable Design Pattern",
-    "Object-Oriented Programming",
-    "Test-Driven Development",
-    ".NET C# (4.8/CORE/6)",
-    "MS SQL",
-    "HTML5",
-    "Javascript/Typescript",
-    "CSS/LESS/SASS",
-    "Angular",
-    "REST/WCF/Micro Services",
-    "Bootstrap",
-    "jQuery",
-    "Web Components",
-    "Reusable Controls",
-    "Responsive Design",
-    "Mobile-first Web",
-    "UI/UX",
-    "Project Management",
-    "Agile Methodologies",
-    "SCRUM",
-    "Azure DevOps",
-    "JIRA",
-    "GitHub Administration",
-    "Python",
-    "ReactJS",
-    "Flask",
-    "Docker",
-    "GitHub Actions",
-    "KanBan",
-    "DataDog",
-    "Power BI",
-    "Power Automate",
-    "SMART Goals",
-    "Firebase",
-    "Razor",
-    "Entity Framework",
-    "LINQ",
-    "MySQL",
-    "PostGreSQL",
-    "node.js",
-    "AngularJS",
-    "Next.js",
-    "Lambda",
-    "Slack",
-    "Microsoft Teams",
-    "Sharepoint",
-    "WCF",
-    "Azure",
-    "Cloud Computing Services (GCS)",
-    "ML",
-    "Generative AI",
-];
+import { HistoryDataService } from "@/services/HistoryService";
 
 function randomTextSize() {
     let sizes = ["xs", "sm", "base", "lg", "xl"];
@@ -97,6 +33,8 @@ function randomColor() {
 }
 
 export default function SkillCloud() {
+    let service = new HistoryDataService();
+    let skills = service.getSkillCloudData();
     let shuffled = skills.shuffle();
     return (
         <div className="">

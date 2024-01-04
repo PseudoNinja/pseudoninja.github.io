@@ -1,4 +1,4 @@
-import { FileService } from "./file";
+import { FileService } from "./FileService";
 
 class DataService {
     data: Object = {};

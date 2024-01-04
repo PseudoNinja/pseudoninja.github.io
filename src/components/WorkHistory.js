@@ -1,44 +1,22 @@
-class WorkItem {
-    where = "";
-    what = "";
-    start = null;
-    stop = null;
-
-    constructor(where, what, start, stop) {
-        this.where = where;
-        this.what = what;
-        this.start = new Date(start);
-        this.stop = new Date(stop);
-    }
-}
-
-const history = [
-    new WorkItem(
-        "Orion Advisor Technology",
-        "Application Development Leader",
-        "2021-12",
-        "2023-10"
-    ),
-    new WorkItem(
-        "Moody's Analytics",
-        "Principle Software Engineer",
-        "2014-09",
-        "2021-12"
-    ),
-];
+import { HistoryDataService } from "@/services/HistoryService";
 
 export default function WorkHistory() {
+    const historyService = new HistoryDataService();
+    let history = historyService.getHistoryItems();
     return (
         <div className="workHistory">
-            {history.forEach((wi) => {
-                <div className="workItem">
-                    <h3>
-                        {wi.what} : {wi.where}
-                    </h3>
-                    <span>
-                        {wi.start} - {wi.stop}
-                    </span>
-                </div>;
+            {history.map((wi, i) => {
+                return (
+                    <div className="workItem mb-5" key={wi}>
+                        <h3 className="text-lg bold">{wi.what}</h3>
+                        <span className="title block text-crimson-500">
+                            {wi.where}
+                        </span>
+                        <span className="dates text-sm text-mako-500">
+                            {wi.start} - {wi.end}
+                        </span>
+                    </div>
+                );
             })}
         </div>
     );

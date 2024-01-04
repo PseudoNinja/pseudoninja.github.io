@@ -1,6 +1,6 @@
 /** Multi-Language Support Data Service **/
 
-import { FileService } from "./file";
+import { FileService } from "../services/FileService";
 
 export interface LanguageData {
     title: string;
