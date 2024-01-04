@@ -3,6 +3,12 @@ import { HistoryDataService } from "@/services/HistoryService";
 export default function WorkHistory() {
     const historyService = new HistoryDataService();
     let history = historyService.getHistoryItems();
+
+    const dateFormatter = new Intl.DateTimeFormat("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+    });
     return (
         <div className="workHistory">
             {history.map((wi, i) => {
@@ -13,7 +19,15 @@ export default function WorkHistory() {
                             {wi.where}
                         </span>
                         <span className="dates text-sm text-mako-500">
-                            {wi.start} - {wi.end}
+                            {new Date(wi.start).toLocaleDateString(undefined, {
+                                month: "short",
+                                year: "numeric",
+                            })}
+                            -
+                            {new Date(wi.end).toLocaleDateString(undefined, {
+                                month: "short",
+                                year: "numeric",
+                            })}
                         </span>
                     </div>
                 );

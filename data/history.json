@@ -2,8 +2,8 @@
     {
         "what": "Application Development Leader",
         "where": "Orion Advisor Technology",
-        "start": "12-2021",
-        "end": "10-2023",
+        "start": "2021-12",
+        "end": "2023-10",
         "description": "As an Application Development Leader (ADL), I steer the ship of day-to-day operations  playing the role of the Project Manager, Development Manager, and Scrum Master for two high performing fully-remote teams. The Performance Squad which focused on the calculation and presentation of trading performance data analysis to  include trending and historical indexes on both a scheduled or real-time basis. The Reporting Squad developed a tool that allowed our end users (traders and brokers) to drag and drop report components in a “word-like” environment to create and maintain their own reporting templates as needed.  The squad also managed numerous API endpoints to allow other teams in the organization to take advantage of the tools we developed to produce report products in alignment with their needs. My daily responsibilities included running squad times with each squad and tertiary support roles such as DBAs, DevOps, and Client Services. Serving as a Scrum Master (originally in Azure DevOps and later Jira) I was able to eliminate endless meeting cycles, allowing our engineers to focus on what they do best. Beyond squad times, I had resource management responsibilities for eight developers in various states of their careers to include quarterly reviews, hirings, terminations, and identifying training oppertunities. I organized weekly after-hours release verification, developed DataDog monitors, and wrote advanced ADO and JQL queries to develop real-time transparency for leadership. During my time there both teams saw a significant reduction in production bugs and increase in velocity to meet the growing needs.",
         "skills": [
             "AWS",
@@ -30,8 +30,8 @@
     {
         "what": "Principal Software Engineer",
         "where": "Moody’s Analytics",
-        "start": "09-2014",
-        "end": "12-2021",
+        "start": "2014-09",
+        "end": "2021-12",
         "description": "At Moody's Analytics, I was part of the leadership team responsible for a web application used by over 800 clients globally with a total portfolio value of approximately $40M annually. My day-to-day responsibilities include: Leading a team of twelve engineers, identifying industry trends, defining development standards and training curriculum, GitHub organization administration, mentorship (up and down), developing smart goals, scrum master, training scrum masters, code reviews, user experience testing, user interface design, and full-stack development as necessary.",
         "skills": [
             "SQL",
@@ -56,8 +56,8 @@
     {
         "what": "Senior Consultant",
         "where": "Midwest Cloud Computing",
-        "start": "08-2013",
-        "end": "09-2014",
+        "start": "2013-08",
+        "end": "2014-09",
         "description": "Served as application architect for startup company in the human resources sector. Product design centralized around a mobile-first approach  using cognitive and EQ analysis of people to build cohesive teams.",
         "skills": [
             ".NET",
@@ -77,8 +77,8 @@
     {
         "what": "Senior Consultant",
         "where": "Capstone Consulting",
-        "start": "01-2012",
-        "end": "07-2013",
+        "start": "2012-01",
+        "end": "2013-07",
         "description": "Designed and developed web applications to include Hardware Architecture, Data Architecture, Business Process Logic, and supporting services for thin-client applications in the agriculture industry. Architected the data migration from third-party product to Azure Cloud Application. Implemented thin-client web applications with WCF and rest services. Develop Android toolbox activities for potential projects. Evaluated PhoneGap Applications. Migrated Drupal Instance from MySQL to PostgreSQL. Created Web Service API for RESTful requests to access Drupal-managed resources.",
         "skills": [
             "SQL",
@@ -102,8 +102,8 @@
     {
         "what": "Consultant",
         "where": "Client Resources Inc.",
-        "start": "08-2011",
-        "end": "05-2012",
+        "start": "2011-08",
+        "end": "2012-05",
         "description": "Supported internal applications by developing front-end interfaces for internal applications in Angular, TypeScript, and SCSS. Supported the development of a multitude of Android-based mobile apps. Developed Vanilla JavaScript-driven web application wrappers for the financial sector.",
         "skills": [
             "HTML",
@@ -118,8 +118,8 @@
     {
         "what": "Webmaster",
         "where": "Medico Insurance",
-        "start": "09-2009",
-        "end": "06-2011",
+        "start": "2009-09",
+        "end": "2011-06",
         "description": "Managed team of four software engineers; Developed and administered four enterprise level Java (J2EE, JSP, Struts) web applications. Upgraded applications from Tomcat 5.5/JDK 1.5 to Tomcat 7/ JDK 1.6; Implemented project development life-cycle; Implemented two-tier API enterprise middleware; Administered Windows 2003/2008 Servers; Updated enterprise web strategy Transitioned three HTML web sites to Drupal CMS; Developed PHP 5.3 / HTML5 / CSS3 / JQuery Templates and themes. Added functionality for iPad and mobile support.",
         "skills": [
             "Java",
@@ -140,8 +140,8 @@
     {
         "what": "Webmaster / Lead Coordinator",
         "where": "The Nebraska Medical Center",
-        "start": "07-2008",
-        "end": "08-2009",
+        "start": "2008-07",
+        "end": "2009-08",
         "description": "The Webmaster / Lead Coordinator, under the direction of the Director of  Marketing Services, and Vice President of Marketing and Strategic Planning, is responsible for the development and implementation of a hospital web strategy, in concert with marketing initiatives; manages the development and maintenance of all web initiatives; and works closely with managers, directors, and other key constituents in organization to develop and sustain working relationships necessary to advance a vibrant web presence in the community. Responsible for an application development team of twelve that developed and implemented hospital web strategy; managed the development and maintenance of all web initiatives; Implemented Social Media Campaigns; and key communications in coordination with disaster management.",
         "skills": [
             ".NET",
@@ -158,8 +158,8 @@
     {
         "what": "Webmaster",
         "where": "RSI Medical Staffing",
-        "start": "04-2006",
-        "end": "06-2008",
+        "start": "2006-04",
+        "end": "2008-06",
         "description": "Managed a web team of four Developers; Engineered, Administered, and Developed a $7 million enterprise application. The project increased the performance of staff by 30%, reduced waste by 65%, and recovered $1.7 Million in annual lost revenue.  Served for six months as interim IT Director.",
         "skills": [
             "ASP.NET",
@@ -176,8 +176,8 @@
     {
         "what": "Executive Support Applications Developer",
         "where": "PayPal Inc.",
-        "start": "11-2005",
-        "end": "03-2006",
+        "start": "2005-11",
+        "end": "2006-03",
         "description": "Developed PHP enterprise applications in direct support of Executive Leadership missions; Administered two Slackware Linux Servers (LAMP Stack), and one Windows 2003 Server (WAMP Stack).",
         "skills": [
             "Linux",
@@ -195,8 +195,8 @@
     {
         "what": "Web Systems Engineer",
         "where": "Creighton University",
-        "start": "09-2004",
-        "end": "11-2005",
+        "start": "2004-09",
+        "end": "2005-11",
         "description": "Senior Typo3 CMS Developer/Administrator; Developed training materials for users and Admins; Designed 508 W3C Compliant templates.",
         "skills": [
             "Linux",
@@ -212,8 +212,8 @@
     {
         "what": "Web Developer Internship",
         "where": "Union Pacific Railroad",
-        "start": "01-2004",
-        "end": "09-2004",
+        "start": "2004-01",
+        "end": "2004-09",
         "description": "",
         "skills": [
             "Cold Fusion",
