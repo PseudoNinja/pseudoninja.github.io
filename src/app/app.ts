@@ -1,10 +1,10 @@
-import { LanguageData, LanguageDataService } from "./lang";
+import { LanguageDataService } from "../services/LanguageDataService";
 
 class Applicaiton {
     static DEFAULT_LANGUAGE = "en-US";
 
     language: string;
-    language_pack: LanguageData | null = null;
+    lang: LanguageDataService;
 
     title: string = "Loading ...";
     description: string = "";
@@ -13,13 +13,12 @@ class Applicaiton {
 
     constructor(language: string = Applicaiton.DEFAULT_LANGUAGE) {
         this.language = language;
-        this.language_pack =
-            LanguageDataService.GetLanguagePackFromFile(language);
+        this.lang = new LanguageDataService(language);
 
-        this.title = this.language_pack.title;
-        this.description = this.language_pack.description;
-        this.tagline = this.language_pack.tagline;
-        this.welcome = this.language_pack.welcome;
+        this.title = this.lang.translate("title");
+        this.description = this.lang.translate("description");
+        this.tagline = this.lang.translate("tagline");
+        this.welcome = this.lang.translate("welcome");
     }
 }
 

@@ -1,5 +1,5 @@
 import { randomInt } from "crypto";
-import { HistoryDataService } from "@/services/HistoryService";
+import { HistoryDataService } from "@/services/HistoryDataService";
 
 function randomTextSize() {
     let sizes = ["xs", "sm", "base", "lg", "xl"];

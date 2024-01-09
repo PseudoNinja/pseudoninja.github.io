@@ -4,7 +4,7 @@ import { Applicaiton } from "./app";
 import HeroImage from "@/components/HeroImage";
 import Button from "@/components/Button";
 
-const app = new Applicaiton();
+export const app = new Applicaiton();
 
 export const metadata: Metadata = {
     title: app.title,
@@ -39,10 +39,10 @@ export default function RootLayout({
                         id="dashhboard-footer"
                         className="grow-0 p-4 bg-mako-700 flex justfiy-center rounded-t-lg"
                     >
-                        <button>LinkedIn</button>
-                        <button>Call Me</button>
-                        <button>GitHub</button>
-                        <button>Twitter</button>
+                        <button>{app.lang.translate("LinkedIn")}</button>
+                        <button>{app.lang.translate("call me")}</button>
+                        <button>{app.lang.translate("GitHub")}</button>
+                        <button>{app.lang.translate("Twitter")}</button>
                     </footer>
                 </div>
             </body>

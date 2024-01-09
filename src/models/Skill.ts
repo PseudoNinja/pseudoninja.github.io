@@ -1,5 +1,9 @@
 interface Skill {
     title: string;
+    firstUsed: Date;
+    lastUsed: Date;
+    lengthOfUse: number;
+    weight: number;
 }
 
 class Skill {
@@ -9,11 +13,11 @@ class Skill {
     lengthOfUse: number = 0.0;
     weight: number = 0.0;
 
-    constructor(title: string, firstUsed: string = "", lastUsed: string = "") {
+    constructor(title: string, firstUsed: Date, lastUsed: Date) {
         this.title = title;
-        this.firstUsed = new Date(firstUsed);
-        this.lastUsed = new Date(lastUsed);
-        this.lengthOfUse = this.lastUsed.getTime() - this.firstUsed.getTime();
+        this.firstUsed = firstUsed;
+        this.lastUsed = lastUsed;
+        this.lengthOfUse = this._calcuateLengthOfUse();
         this.weight = this._calculateWeight();
     }
 
@@ -30,6 +34,10 @@ class Skill {
         }
 
         return weight;
+    }
+
+    private _calcuateLengthOfUse() {
+        return this.lastUsed.getTime() - this.firstUsed.getTime();
     }
 }
 
