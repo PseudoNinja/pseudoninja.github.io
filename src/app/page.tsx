@@ -15,7 +15,7 @@ export default function HomePage() {
             </section>
             <Panel id="about" title="Who I Am">
                 <p>{app.lang.translate("about")}</p>
-                <h3 className="font-xl">
+                <h3 className="text-xl my-4">
                     {app.lang.translate("Key Strengths")}
                 </h3>
                 <ul className="ml-10 list-disc">
@@ -60,7 +60,9 @@ export default function HomePage() {
                         )}
                     </li>
                 </ul>
-                <h3>{app.lang.translate("Highlights")}</h3>
+                <h3 className="text-xl my-4">
+                    {app.lang.translate("Highlights")}
+                </h3>
                 <ul className="ml-10 list-disc">
                     <li>
                         {app.lang.translate(
