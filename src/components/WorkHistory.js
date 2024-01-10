@@ -15,7 +15,7 @@ export default function WorkHistory() {
             {history.map((work_item) => (
                 <div
                     className="workHistory-item border-b-2 my-4"
-                    key={work_item}
+                    key={work_item.where + "_" + work_item.start}
                 >
                     <header>
                         <h2 className="workHistory-item-title flex flex-col">
@@ -48,7 +48,7 @@ export default function WorkHistory() {
                         <h3 className="text-lg">Skills</h3>
                         <ul className="flex flex-wrap">
                             {work_item.skills.map((skill) => (
-                                <li className="mx-2" key={skill}>
+                                <li className="mx-2" key={skill.title}>
                                     {skill}
                                 </li>
                             ))}

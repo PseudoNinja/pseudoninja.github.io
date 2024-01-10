@@ -29,6 +29,6 @@
         "**/*.tsx",
         ".next/types/**/*.ts",
         "src/components/HeroImage.js"
-, "src/components/WorkHistory.js"    ],
+, "src/components/WorkHistory.js", "src/service-worker.js", "src/index.js"    ],
     "exclude": ["node_modules"]
 }

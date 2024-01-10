@@ -1,10 +1,16 @@
 import { randomInt } from "crypto";
 import { HistoryDataService } from "@/services/HistoryDataService";
 
+const sizes = ["xs", "sm", "base", "lg", "xl"];
+
 function randomTextSize() {
-    let sizes = ["xs", "sm", "base", "lg", "xl"];
     let i = randomInt(0, sizes.length);
     return "text-" + sizes[i];
+}
+
+function textSizeByWeight(weight = 0) {
+    let size_key = Math.round(weight * sizes.length);
+    return sizes[size_key];
 }
 
 Array.prototype.shuffle = function () {
@@ -40,11 +46,11 @@ export default function SkillCloud() {
         <div className="">
             <ul className="flex list-none p-0 flex-wrap justify-center items-center leading-loose">
                 {shuffled.map((skill, i) => {
-                    let textSize = randomTextSize();
+                    let textSize = textSizeByWeight(skill.weight);
                     let textColor = randomColor();
                     let className = "px-2 py-1 " + textSize + " " + textColor;
                     return (
-                        <li key={skill}>
+                        <li key={skill.title} data-weight={skill.weight}>
                             <span className={className}>{skill}</span>
                         </li>
                     );
