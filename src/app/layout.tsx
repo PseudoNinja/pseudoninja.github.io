@@ -40,9 +40,9 @@ export default function RootLayout({
                         </div>
                     </aside>
                     <main className="grow overflow-y-auto">{children}</main>
-                    <aside className="grow-0 p-4 bg-sky-500 text-white border-collapse border-none flex justify-center">
+                    {/* <aside className="grow-0 p-4 bg-sky-500 text-white border-collapse border-none flex justify-center">
                         <MenuButton />
-                    </aside>
+                    </aside> */}
                     {/* <footer
                         id="dashhboard-footer"
                         className="grow-0 p-4 bg-mako-700 flex justify-between rounded-t-lg"
