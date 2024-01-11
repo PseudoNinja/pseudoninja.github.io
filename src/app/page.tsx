@@ -12,7 +12,7 @@ export default function HomePage() {
                     <HeroImage size={150} />
                 </div>
             </div>
-            <Panel id="about" title="Who I Am">
+            <Panel id="about" title={app.lang.translate("Who Am I")}>
                 <p>{app.lang.translate("about")}</p>
                 <h3 className="text-xl my-4">
                     {app.lang.translate("Key Strengths")}
@@ -85,10 +85,10 @@ export default function HomePage() {
                     </li>
                 </ul>
             </Panel>
-            <Panel id="skills" title="What I Do">
+            <Panel id="skills" title={app.lang.translate("What I Do")}>
                 <SkillCloud />
             </Panel>
-            <Panel id="history" title="Where I've Been">
+            <Panel id="history" title={app.lang.translate("Where I Have Been")}>
                 <WorkHistory />
             </Panel>
         </div>
