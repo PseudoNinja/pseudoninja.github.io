@@ -2,17 +2,16 @@ import HeroImage from "@/components/HeroImage";
 import Panel from "@/components/Panel";
 import SkillCloud from "@/components/SkillCloud";
 import WorkHistory from "@/components/WorkHistory";
-import { app } from "./layout";
+import app from "./app";
 
 export default function HomePage() {
     return (
         <div id="homepage-container" className="flex flex-col border-none">
-            <section
-                id="heroImage-wrapper"
-                className="bg-picton-blue-500 h-36 flex justify-center overflow-visible mb-20"
-            >
-                <HeroImage />
-            </section>
+            <div className="bg-picton-blue-500 h-32 flex justify-center overflow-visible mb-20">
+                <div className="bg-picton-blue-500 h-48 w-48 flex justify-center rounded-full">
+                    <HeroImage size={150} />
+                </div>
+            </div>
             <Panel id="about" title="Who I Am">
                 <p>{app.lang.translate("about")}</p>
                 <h3 className="text-xl my-4">

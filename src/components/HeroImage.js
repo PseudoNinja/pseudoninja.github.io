@@ -1,15 +1,16 @@
 import Image from "next/image";
+import app from "@/app/app";
 
-export default function HeroImage() {
+export default function HeroImage({ size = 100 }) {
     return (
-        <div className="w-48 h-48 bg-picton-blue-500 rounded-full flex justify-center">
-            <Image
-                priority
-                src="/hero-image.svg"
-                height={150}
-                width={150}
-                alt="Its kind of like a ninja."
-            />
-        </div>
+        <Image
+            priority
+            src="/hero-image.svg"
+            height={size}
+            width={size}
+            alt={app.lang.translate(
+                "A cartoon bust ninja with a round face, spikey yellow hair, white skin, and bright blue eyes"
+            )}
+        />
     );
 }

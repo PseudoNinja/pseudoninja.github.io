@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Applicaiton } from "./app";
+import app from "./app";
 import HeroImage from "@/components/HeroImage";
-
-export const app = new Applicaiton();
+import MenuButton from "@/components/MenuButton";
 
 export const metadata: Metadata = {
-    title: app.title,
-    description: app.description,
+    title: app.lang.translate("title"),
+    description: app.lang.translate("description"),
 };
 
 export default function RootLayout({
@@ -25,7 +24,7 @@ export default function RootLayout({
                     id="container"
                     className="w-full h-screen flex flex-col content-center overscroll-none"
                 >
-                    <header className="grow-0 p-4 bg-sky-500 text-white border-collapse border-none flex">
+                    <aside className="grow-0 p-4 bg-sky-500 text-white border-collapse border-none flex">
                         <h1 id="site-title" className="hidden">
                             {app.title}
                         </h1>
@@ -35,35 +34,15 @@ export default function RootLayout({
                         <span id="welcome" className="text-2xl">
                             {app.welcome}
                         </span>
-                        <div className="menu-container flex-right">
-                            <button
-                                type="button"
-                                className="button border-2 border-white p-4 rounded-sm"
-                            >
-                                <i className="icon color-white">
-                                    <svg
-                                        viewBox="0 0 100 80"
-                                        width="40"
-                                        height="40"
-                                    >
-                                        <rect width="100" height="20"></rect>
-                                        <rect
-                                            y="30"
-                                            width="100"
-                                            height="20"
-                                        ></rect>
-                                        <rect
-                                            y="60"
-                                            width="100"
-                                            height="20"
-                                        ></rect>
-                                    </svg>
-                                    Menu
-                                </i>
-                            </button>
+                        <div className="spacer flex-1"></div>
+                        <div className="invisible">
+                            <HeroImage size={32} />
                         </div>
-                    </header>
+                    </aside>
                     <main className="grow overflow-y-auto">{children}</main>
+                    <aside className="grow-0 p-4 bg-sky-500 text-white border-collapse border-none flex justify-center">
+                        <MenuButton />
+                    </aside>
                     {/* <footer
                         id="dashhboard-footer"
                         className="grow-0 p-4 bg-mako-700 flex justify-between rounded-t-lg"

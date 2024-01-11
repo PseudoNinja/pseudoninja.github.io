@@ -22,4 +22,6 @@ class Applicaiton {
     }
 }
 
-export { Applicaiton };
+const app = new Applicaiton();
+
+export default app;

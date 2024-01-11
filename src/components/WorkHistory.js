@@ -1,5 +1,5 @@
 import { HistoryDataService } from "@/services/HistoryDataService";
-import { app } from "@/app/layout";
+import app from "@/app/app";
 
 const dateFormatter = {
     month: "short",
