@@ -1,44 +1,61 @@
 /** Multi-Language Support Data Service **/
 
-import { FileService } from "./FileService";
+import { DataService } from "./DataService";
 
-const DEFAULT_LANGUAGE = "en-us";
-const DEFAULT_DATA_PATH = "data/";
+import languageData from "@data/lang.json";
 
-export interface LanguageData {
-    [key: string]: string;
+enum Language {
+    ENGLISH = "en",
+    CHINENSE_SIMPLIFIED = "zh-Hans",
+    CHINESE_TRADITIONAL = "zh-TW",
+    SPANISH = "es",
+    ARABIC = "ar",
+    PORTUGUESE = "pt",
+    INDONESIAN = "id",
+    FRENCH = "fr",
+    JAPANESE = "ja",
+    RUSSIAN = "ru",
+    GERMAN = "de",
 }
 
-class LanguageDataService {
-    language_pack: LanguageData;
+const DEFAULT_LANGUAGE = Language.ENGLISH;
 
-    constructor(
-        language: string = DEFAULT_LANGUAGE,
-        data_path: string = DEFAULT_DATA_PATH
-    ) {
-        let language_file_path = data_path + "lang." + language + ".json";
-        if (!FileService.FileExists(language_file_path)) {
-            // if doesnt exist, use default while file is generated
-            language_file_path =
-                data_path + "lang." + DEFAULT_LANGUAGE + ".json";
+interface LanguageRecord {
+    en: string;
+    "zh-Hans": string;
+    "zh-TW": string;
+    es: string;
+    ar: string;
+    pt: string;
+    id: string;
+    fr: string;
+    ja: string;
+    ru: string;
+    de: string;
+}
+class LanguageDataService extends DataService {
+    _data: Array<LanguageRecord> = new Array<LanguageRecord>();
+
+    translate(
+        str: string,
+        to: Language,
+        from: Language = DEFAULT_LANGUAGE
+    ): string {
+        let translated: string = str;
+        if (from != to) {
+            let record: LanguageRecord = this._data.filter(
+                (f) => f[from] === str
+            )[0];
+            translated = record[to];
         }
-
-        this.language_pack = this._loadLanguagePackFromFile(language_file_path);
-    }
-
-    private _loadLanguagePackFromFile(
-        language_file_path: string = DEFAULT_LANGUAGE
-    ): LanguageData {
-        return <LanguageData>FileService.Parse(language_file_path);
-    }
-
-    translate(original: string): string {
-        let value = this.language_pack[original];
-        if (value == null) {
-            value = original;
-        }
-        return value;
+        return translated;
     }
 }
 
-export { LanguageDataService };
+class LanguageDataServiceFactory {
+    static GetLanguageDataService(data: Array<LanguageRecord> = languageData) {
+        return new LanguageDataService(data);
+    }
+}
+
+export { LanguageDataService, LanguageDataServiceFactory };
