@@ -1,5 +1,6 @@
 import { HistoryDataServiceFactory } from "@/services/HistoryDataService";
 import history_data from "@data/history.json";
+import app from "@/app/app";
 
 export default function ProjectHistory() {
     let historyDataService =
@@ -18,6 +19,23 @@ export default function ProjectHistory() {
                                 {project.title}
                             </span>
                         </h2>
+                        <div className="date text-mako-700 mb-4">
+                            <span className="date-start">
+                                {new Date(project.when).toLocaleDateString(
+                                    app.client_language,
+                                    app.DateFormatter
+                                )}
+                            </span>
+                            <span className="date-seperator mx-1">-</span>
+                            <span className="date-end">
+                                {project.end != null
+                                    ? new Date(project.end).toLocaleDateString(
+                                          app.client_language,
+                                          app.DateFormatter
+                                      )
+                                    : app.lang.translate("Present")}
+                            </span>
+                        </div>
                     </header>
                     <div className="content">{project.description}</div>
 

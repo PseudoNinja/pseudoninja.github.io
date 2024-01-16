@@ -29,23 +29,46 @@ class HistoryDataService {
         return this.projects;
     }
 
-    public getSkills(distinct: boolean = false): Array<Skill> {
+    public getSkills(): Array<Skill> {
         let skills: Array<Skill> = new Array<Skill>();
         this.workHistory.forEach((history_item) => {
+            history_item.skills.forEach((skill) => {
+                skill.firstUsed = history_item.when;
+                skill.lastUsed = history_item.end ?? new Date();
+            });
+
             skills = skills.concat(history_item.skills);
         });
         this.projects.forEach((history_item) => {
+            history_item.skills.forEach((skill) => {
+                skill.firstUsed = history_item.when;
+                skill.lastUsed = history_item.end ?? new Date();
+            });
             skills = skills.concat(history_item.skills);
         });
-        if (distinct) {
-            skills = skills.filter(
-                (value: any, index: any, array: string | any[]) => {
-                    return array.indexOf(value) === index;
-                }
-            );
-        }
 
         return skills;
+    }
+
+    public getCloudSkills() {
+        let skills = this.getSkills();
+        let distinct = skills.reduce((accumulator: Skill[], current: Skill) => {
+            if (!accumulator.some((skill) => skill.title === current.title)) {
+                accumulator.push(current);
+            }
+
+            return accumulator;
+        }, []);
+
+        distinct.forEach((skill) => {
+            skills
+                .filter((f) => f.title === skill.title)
+                .forEach((match) => {
+                    skill.weight += match.weight;
+                });
+        });
+
+        return distinct;
     }
 }
 

@@ -19,7 +19,7 @@ abstract class HistoryItem {
     constructor(data: HistoryItemData) {
         this.title = data.title;
         this.when = new Date(data.start);
-        this.end = new Date(data.end ?? "");
+        this.end = data.end != null ? new Date(data.end) : null;
         this.description = data.description;
 
         this.skills = new Array<Skill>();

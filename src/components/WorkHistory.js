@@ -3,11 +3,6 @@ import app from "@/app/app";
 import history_data from "@data/history.json";
 
 export default function WorkHistory() {
-    const dateFormatter = {
-        month: "short",
-        year: "numeric",
-    };
-
     let historyDataService =
         HistoryDataServiceFactory.GetHistoryDataService(history_data);
     let work_history = historyDataService.getWorkHistoryItems();
@@ -31,14 +26,14 @@ export default function WorkHistory() {
                             <span className="date-start">
                                 {new Date(work_item.when).toLocaleDateString(
                                     app.client_language,
-                                    dateFormatter
+                                    app.DateFormatter
                                 )}
                             </span>
                             <span className="date-seperator mx-1">-</span>
                             <span className="date-end">
                                 {new Date(work_item.end).toLocaleDateString(
                                     app.client_language,
-                                    dateFormatter
+                                    app.DateFormatter
                                 )}
                             </span>
                         </div>

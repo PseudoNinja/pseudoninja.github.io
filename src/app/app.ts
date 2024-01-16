@@ -13,6 +13,11 @@ class Applicaiton {
     description: string;
     welcome: string;
 
+    DateFormatter = {
+        month: "short",
+        year: "numeric",
+    };
+
     constructor(lang: string = Applicaiton.DEFAULT_CLIENT_LANGUAGE) {
         this.client_language = lang;
         this.lang = LanguageDataServiceFactory.GetLanguageDataService();

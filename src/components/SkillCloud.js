@@ -2,7 +2,7 @@ import { randomInt } from "crypto";
 import { HistoryDataService } from "@/services/HistoryDataService";
 import history_data from "@data/history.json";
 
-const sizes = ["xs", "sm", "base", "lg", "xl"];
+const sizes = ["xs", "sm", "base", "lg", "xl", "2xl"];
 
 function randomTextSize() {
     let i = randomInt(0, sizes.length);
@@ -10,8 +10,8 @@ function randomTextSize() {
 }
 
 function textSizeByWeight(weight = 0) {
-    let size_key = Math.round(weight * sizes.length);
-    return sizes[size_key];
+    let size_key = Math.round(sizes.length * weight);
+    return "text-" + sizes[size_key];
 }
 
 Array.prototype.shuffle = function () {
@@ -41,7 +41,7 @@ function randomColor() {
 
 export default function SkillCloud() {
     let service = new HistoryDataService(history_data);
-    let skills = service.getSkills(true);
+    let skills = service.getCloudSkills();
     let shuffled = skills.shuffle();
     return (
         <div className="skills-cloud">
@@ -51,7 +51,7 @@ export default function SkillCloud() {
                     let textColor = randomColor();
                     let className = "px-2 py-1 " + textSize + " " + textColor;
                     return (
-                        <li key={skill.title} data-weight={skill.weight}>
+                        <li key={skill.title}>
                             <span className={className}>{skill.title}</span>
                         </li>
                     );
