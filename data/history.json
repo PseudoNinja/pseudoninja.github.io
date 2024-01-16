@@ -313,9 +313,30 @@
                 "SEO",
                 "Search Submission",
                 "Graphic Design",
-                "stock photography"
+                "Photography"
             ],
             "thumbnail_src": "/daisho-tactical-logo.png",
+            "thumbnail_alt": ""
+        },
+        {
+            "title": "susanmiller.vote",
+            "description": "Created a wordpress site for local political candidate.",
+            "start": "2021-11-01",
+            "end": "2022-11-01",
+            "skills": [
+                "Wordpress",
+                "Certificaite Management",
+                "Image Manipulation",
+                "SEO",
+                "Search Submission",
+                "Graphic Design",
+                "Stripe",
+                "Donors Choose",
+                "User Experience (UX)",
+                "User Interface (UI) Design",
+                "Copywrite"
+            ],
+            "thumbnail_src": "",
             "thumbnail_alt": ""
         }
     ]
