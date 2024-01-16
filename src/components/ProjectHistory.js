@@ -26,14 +26,27 @@ export default function ProjectHistory() {
                                     app.DateFormatter
                                 )}
                             </span>
-                            <span className="date-seperator mx-1">-</span>
-                            <span className="date-end">
-                                {project.end != null
-                                    ? new Date(project.end).toLocaleDateString(
-                                          app.client_language,
-                                          app.DateFormatter
-                                      )
-                                    : app.lang.translate("Present")}
+
+                            <span
+                                className={
+                                    project.end != null &&
+                                    project.end.toTimeString() ==
+                                        project.when.toTimeString()
+                                        ? "hidden"
+                                        : ""
+                                }
+                            >
+                                <span className="date-seperator mx-1">-</span>
+                                <span className="date-end">
+                                    {project.end != null
+                                        ? new Date(
+                                              project.end
+                                          ).toLocaleDateString(
+                                              app.client_language,
+                                              app.DateFormatter
+                                          )
+                                        : app.lang.translate("Present")}
+                                </span>
                             </span>
                         </div>
                     </header>

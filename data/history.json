@@ -40,8 +40,8 @@
                 "SQL",
                 ".NET",
                 "C#",
-                "HTML5",
-                "CSS",
+                "HTML",
+                "Cascasding Style Sheets (CSS)",
                 "LESS",
                 "SASS",
                 "JavaScript",
@@ -71,7 +71,7 @@
                 "Angular",
                 "Bootstrap",
                 "HTML",
-                "CSS",
+                "Cascasding Style Sheets (CSS)",
                 "SASS",
                 "JavaScript",
                 "Azure",
@@ -93,7 +93,7 @@
                 "C#",
                 "Angular",
                 "HTML",
-                "CSS",
+                "Cascasding Style Sheets (CSS)",
                 "Azure",
                 "WCF",
                 "Rest",
@@ -119,7 +119,7 @@
                 "Angular",
                 "TypeScript",
                 "SCSS",
-                "CSS",
+                "Cascasding Style Sheets (CSS)",
                 "Javascript",
                 "jQuery"
             ],
@@ -131,19 +131,19 @@
             "where": "Medico Insurance",
             "start": "2009-09",
             "end": "2011-06",
-            "description": "Managed and modernized enterprise web environment: Led a team of 4 engineers developing and maintaining 4 Java web applications; Upgraded application stack (Tomcat, JDK) and implemented project lifecycle methodology; Built a two-tier API middleware for enhanced integration; Administered Windows servers and implemented a modern web strategy; Migrated 3 HTML sites to Drupal CMS and built mobile-friendly interfaces (PHP, HTML5, CSS3, jQuery);",
+            "description": "Managed and modernized enterprise web environment: Led a team of 4 engineers developing and maintaining 4 Java web applications; Upgraded application stack (Tomcat, JDK) and implemented project lifecycle methodology; Built a two-tier API middleware for enhanced integration; Administered Windows servers and implemented a modern web strategy; Migrated 3 HTML sites to Drupal CMS and built mobile-friendly interfaces (PHP, HTML, CSS3, jQuery);",
             "skills": [
                 "Java",
                 "J2EE",
                 "JSP",
-                "STruts",
+                "Struts",
                 "Tomcat",
                 "API",
                 "Windows Server",
                 "Drupal",
                 "PHP",
                 "HTML",
-                "CSS",
+                "Cascasding Style Sheets (CSS)",
                 "jQuery",
                 "mobile-web"
             ],
@@ -164,7 +164,7 @@
                 "Rest",
                 "HTML",
                 "JavaScript",
-                "CSS",
+                "Cascasding Style Sheets (CSS)",
                 "Social Media"
             ],
             "thumbnail_src": "",
@@ -180,12 +180,12 @@
                 "ASP.NET",
                 "Visual Basic",
                 "HTML",
-                "CSS",
+                "Cascasding Style Sheets (CSS)",
                 "JavaScript",
                 "Infrastructure",
                 "Networking",
-                "UI",
-                "UX"
+                "User Interface (UI) Design",
+                "User Experience (UX)"
             ],
             "thumbnail_src": "",
             "thumbnail_alt": ""
@@ -203,7 +203,7 @@
                 "PHP",
                 " HTML",
                 " JavaScript",
-                "CSS",
+                "Cascasding Style Sheets (CSS)",
                 "Rest",
                 "IIS",
                 "Windows Server"
@@ -224,7 +224,7 @@
                 "PHP",
                 "HTML",
                 "JavaScript",
-                "CSS",
+                "Cascasding Style Sheets (CSS)",
                 "Typo3"
             ],
             "thumbnail_src": "",
@@ -233,8 +233,8 @@
         {
             "title": "Web Developer Internship",
             "where": "Union Pacific Railroad",
-            "start": "2004-01",
-            "end": "2004-09",
+            "start": "2004-01-01",
+            "end": "2004-09-15",
             "description": "Developed Cold Fusion applications and Flash Components while administering SQL databases and created reports for the Mechanical Division in support of the Union Pacific Railroad global mission.",
             "skills": [
                 "Cold Fusion",
@@ -250,9 +250,17 @@
     ],
     "projects": [
         {
-            "title": "PseudoNinja.com",
-            "description": "Personal portfolio site I used to learn my way around React, Next.js, Tailwind",
-            "start": "2024-01",
+            "title": "Python Image Conversion Script",
+            "description": "I was contacted by a member of a local Historical Society with an issue regarding some image files they had created from scanned documents. The documents were scanned in 600 DPI large format TIFF, which took up approximately 29GB of storage. With their limited budget, It would be important to get the images compressed down to a reasonable size but still be usable. It would have taken weeks to manually convert or months to rescan all of the documents.  I wrote a multithreaded Python script that traversed the 29GB directory and identified images with a TIFF format. The script then converted them to a JPEG image file format reducing the overall file size by approximately 66%.",
+            "start": "2024-01-10",
+            "end": "2024-01-10",
+            "skills": ["Python", "PyTest"],
+            "link": "https://github.com/PseudoNinja/py_scripts"
+        },
+        {
+            "title": "pseudoninja.com",
+            "description": "Personal portfolio site I used to learn my way around React, Next.js, and Tailwind.",
+            "start": "2024-01-01",
             "end": null,
             "skills": [
                 "Git",
@@ -262,9 +270,52 @@
                 "Tailwind",
                 "Next.js",
                 "JavaScript",
-                "TypeScript"
+                "TypeScript",
+                "Visual Studio Code",
+                "Progressive Web Apps (PWA)",
+                "Logo Design",
+                "Vector Graphics",
+                "User Interface (UI) Design",
+                "User Experience (UX)"
             ],
             "thumbnail_src": "",
+            "thumbnail_alt": "",
+            "link": "https://github.com/PseudoNinja/pseudoninja.github.io"
+        },
+        {
+            "title": "rammastertraining.com",
+            "description": "Converted an outdated static HTML pages to a Wordpress site for a local firearms insructor; Integrated online ticketing system and other third party plugins; web hosting migration, domain and certificate management, Image manipulation and optimization, SEO, search submission, and social media integration.",
+            "start": "2022-10-01",
+            "end": "2023-06-01",
+            "skills": [
+                "DNS",
+                "Wordpress",
+                "Wordpress Plugins",
+                "Certificaite Management",
+                "Image Manipulation",
+                "SEO",
+                "Search Submission",
+                "Facebook",
+                "Twitter"
+            ],
+            "thumbnail_src": "",
+            "thumbnail_alt": ""
+        },
+        {
+            "title": "daishotactical.com",
+            "description": "Created a shopify store front from the ground up for a local vendor.",
+            "start": "2021-10-01",
+            "end": "2022-07-01",
+            "skills": [
+                "Shopify",
+                "Certificaite Management",
+                "Image Manipulation",
+                "SEO",
+                "Search Submission",
+                "Graphic Design",
+                "stock photography"
+            ],
+            "thumbnail_src": "/daisho-tactical-logo.png",
             "thumbnail_alt": ""
         }
     ]
