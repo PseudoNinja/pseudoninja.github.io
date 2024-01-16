@@ -1,36 +1,37 @@
 import { Skill } from "./Skill";
 
-interface HistoryItem {
-    what: string;
-    where: string;
-    start: Date;
-    end: Date | null;
+export interface HistoryItemData {
+    title: string;
     description: string;
-    skills: Array<Skill>;
+    start: string;
+    end: string | null;
+    skills: string[] | null;
 }
 
-class HistoryItem {
-    what: string;
-    where: string;
-    start: Date;
-    end: Date | null;
+abstract class HistoryItem {
+    title: string;
     description: string;
-    skills: Array<Skill>;
+    when: Date;
+    end: Date | null;
 
-    constructor(
-        what: string,
-        where: string,
-        start: Date,
-        end: Date | null,
-        description: string,
-        skills: Array<Skill> = new Array<Skill>()
-    ) {
-        this.what = what;
-        this.where = where;
-        this.start = start;
-        this.end = end;
-        this.description = description;
-        this.skills = skills;
+    skills: Skill[];
+
+    constructor(data: HistoryItemData) {
+        this.title = data.title;
+        this.when = new Date(data.start);
+        this.end = new Date(data.end ?? "");
+        this.description = data.description;
+
+        this.skills = new Array<Skill>();
+        if (data.skills !== null) {
+            this.skills = data.skills.map((m) => {
+                return new Skill(
+                    m,
+                    this.when ?? new Date("09/15/2004"),
+                    this.end ?? new Date()
+                );
+            });
+        }
     }
 }
 

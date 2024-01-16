@@ -34,11 +34,20 @@ interface LanguageRecord {
     de: string;
 }
 class LanguageDataService extends DataService {
-    _data: Array<LanguageRecord> = new Array<LanguageRecord>();
+    _data: Array<LanguageRecord>;
+    _client_language: Language;
 
+    constructor(
+        data: Array<LanguageRecord> = new Array<LanguageRecord>(),
+        language: Language = DEFAULT_LANGUAGE
+    ) {
+        super();
+        this._data = data;
+        this._client_language = language;
+    }
     translate(
         str: string,
-        to: Language,
+        to: Language = this._client_language,
         from: Language = DEFAULT_LANGUAGE
     ): string {
         let translated: string = str;
@@ -46,15 +55,21 @@ class LanguageDataService extends DataService {
             let record: LanguageRecord = this._data.filter(
                 (f) => f[from] === str
             )[0];
-            translated = record[to];
+            if (record !== undefined) {
+                translated = record[to];
+            }
         }
         return translated;
     }
 }
 
 class LanguageDataServiceFactory {
-    static GetLanguageDataService(data: Array<LanguageRecord> = languageData) {
-        return new LanguageDataService(data);
+    static GetLanguageDataService(
+        data: Array<LanguageRecord> = languageData,
+        client_language: string = <string>DEFAULT_LANGUAGE
+    ) {
+        let language: Language = client_language as Language;
+        return new LanguageDataService(data, language);
     }
 }
 

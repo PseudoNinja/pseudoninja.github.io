@@ -1,26 +1,27 @@
-import { HistoryDataService } from "@/services/HistoryDataService";
+import { HistoryDataServiceFactory } from "@/services/HistoryDataService";
 import app from "@/app/app";
-
-const dateFormatter = {
-    month: "short",
-    year: "numeric",
-};
+import history_data from "@data/history.json";
 
 export default function WorkHistory() {
-    const historyService = new HistoryDataService();
-    let history = historyService.getHistoryItems();
+    const dateFormatter = {
+        month: "short",
+        year: "numeric",
+    };
 
+    let historyDataService =
+        HistoryDataServiceFactory.GetHistoryDataService(history_data);
+    let work_history = historyDataService.getWorkHistoryItems();
     return (
         <div className="workHistory">
-            {history.map((work_item) => (
+            {work_history.map((work_item) => (
                 <div
                     className="workHistory-item border-b-2 my-4"
-                    key={work_item.where + "_" + work_item.start}
+                    key={work_item.where + "_" + work_item.when}
                 >
                     <header>
                         <h2 className="workHistory-item-title flex flex-col">
                             <span className="role text-2xl">
-                                {work_item.what}
+                                {work_item.title}
                             </span>
                             <span className="where text-lg">
                                 {work_item.where}
@@ -28,15 +29,15 @@ export default function WorkHistory() {
                         </h2>
                         <div className="date text-mako-700 mb-4">
                             <span className="date-start">
-                                {new Date(work_item.start).toLocaleDateString(
-                                    app.language,
+                                {new Date(work_item.when).toLocaleDateString(
+                                    app.client_language,
                                     dateFormatter
                                 )}
                             </span>
                             <span className="date-seperator mx-1">-</span>
                             <span className="date-end">
                                 {new Date(work_item.end).toLocaleDateString(
-                                    app.language,
+                                    app.client_language,
                                     dateFormatter
                                 )}
                             </span>
@@ -48,8 +49,11 @@ export default function WorkHistory() {
                         <h3 className="text-lg">Skills</h3>
                         <ul className="flex flex-wrap">
                             {work_item.skills.map((skill) => (
-                                <li className="mx-2" key={skill.title}>
-                                    {skill}
+                                <li
+                                    className="mx-2"
+                                    key={work_item.title + "_" + skill.title}
+                                >
+                                    {skill.title}
                                 </li>
                             ))}
                         </ul>

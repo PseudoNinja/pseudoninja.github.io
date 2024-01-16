@@ -1,24 +1,29 @@
-import { LanguageDataService } from "../services/LanguageDataService";
+import {
+    LanguageDataService,
+    LanguageDataServiceFactory,
+} from "../services/LanguageDataService";
 
 class Applicaiton {
-    static DEFAULT_LANGUAGE = "en-US";
+    static DEFAULT_CLIENT_LANGUAGE = "en-US";
 
-    language: string;
+    client_language: string;
     lang: LanguageDataService;
 
-    title: string = "Loading ...";
-    description: string = "";
-    tagline: string = "";
-    welcome: string = "";
+    title: string;
+    description: string;
+    welcome: string;
 
-    constructor(language: string = Applicaiton.DEFAULT_LANGUAGE) {
-        this.language = language;
-        this.lang = new LanguageDataService(language);
+    constructor(lang: string = Applicaiton.DEFAULT_CLIENT_LANGUAGE) {
+        this.client_language = lang;
+        this.lang = LanguageDataServiceFactory.GetLanguageDataService();
 
-        this.title = this.lang.translate("title");
-        this.description = this.lang.translate("description");
-        this.tagline = this.lang.translate("tagline");
-        this.welcome = this.lang.translate("welcome");
+        this.title = this.lang.translate(
+            "Eric Miller - Professional Problem Solver & People Leader"
+        );
+        this.description = this.lang.translate(
+            "Eric Miller is a professional problem solver and people leader from Omaha, Nebraska. Eric is a Full-stack developer with over 20 years of experience as a Principal Software Engineer, Architect, and Development Manager."
+        );
+        this.welcome = this.lang.translate("Hello");
     }
 }
 

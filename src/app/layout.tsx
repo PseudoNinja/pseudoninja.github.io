@@ -2,11 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import app from "./app";
 import HeroImage from "@/components/HeroImage";
-import MenuButton from "@/components/MenuButton";
 
 export const metadata: Metadata = {
-    title: app.lang.translate("title"),
-    description: app.lang.translate("description"),
+    title: app.title,
+    description: app.description,
 };
 
 export default function RootLayout({
@@ -15,7 +14,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang={app.language}>
+        <html lang={app.client_language}>
             <head>
                 <link rel="manifest" href="manifest.json" />
             </head>
@@ -28,9 +27,6 @@ export default function RootLayout({
                         <h1 id="site-title" className="hidden">
                             {app.title}
                         </h1>
-                        <p id="tagline" className="hidden">
-                            {app.tagline}
-                        </p>
                         <span id="welcome" className="text-2xl">
                             {app.welcome}
                         </span>

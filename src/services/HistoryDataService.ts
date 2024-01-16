@@ -1,42 +1,58 @@
 import { HistoryItem } from "@/models/HistoryItem";
+import {
+    ProjectHistoryItem,
+    ProjectHistoryItemData,
+} from "@/models/ProjectHistoryItem";
 import { Skill } from "@/models/Skill";
+import { WorkHistoryItem, WorkHistoryItemData } from "@/models/WorkHistoryItem";
 import history_data from "@data/history.json";
 
+export interface HistoryData {
+    workHistory: WorkHistoryItemData[];
+    projects: ProjectHistoryItemData[];
+}
+
 class HistoryDataService {
-    _data: Array<HistoryItem>;
+    workHistory: WorkHistoryItem[];
+    projects: ProjectHistoryItem[];
 
-    constructor(data: Array<Object> = history_data) {
-        this._data = new Array<HistoryItem>();
-        this._parse(data);
+    constructor(data: HistoryData) {
+        this.workHistory = data.workHistory.map((w) => new WorkHistoryItem(w));
+        this.projects = data.projects.map((p) => new ProjectHistoryItem(p));
     }
 
-    private _parse(data: Array<Object>) {
-        data.forEach((history_item) => {
-            this._data.push(<HistoryItem>history_item);
-        });
+    public getWorkHistoryItems(): WorkHistoryItem[] {
+        return this.workHistory;
     }
 
-    public getHistoryItems(): Array<HistoryItem> {
-        return this._data;
+    public getProjectHistoryItems(): ProjectHistoryItem[] {
+        return this.projects;
     }
 
-    public getSkills(): Array<Skill> {
-        let skills: Array<Skill> = [];
-        this._data.forEach((history_item) => {
+    public getSkills(distinct: boolean = false): Array<Skill> {
+        let skills: Array<Skill> = new Array<Skill>();
+        this.workHistory.forEach((history_item) => {
             skills = skills.concat(history_item.skills);
         });
-        return skills;
-    }
-
-    public getSkillCloudData(): Array<Skill> {
-        let skills: Array<Skill> = this.getSkills().filter(
-            (value, index, array) => {
-                return array.indexOf(value) === index;
-            }
-        );
+        this.projects.forEach((history_item) => {
+            skills = skills.concat(history_item.skills);
+        });
+        if (distinct) {
+            skills = skills.filter(
+                (value: any, index: any, array: string | any[]) => {
+                    return array.indexOf(value) === index;
+                }
+            );
+        }
 
         return skills;
     }
 }
 
-export { HistoryDataService };
+class HistoryDataServiceFactory {
+    public static GetHistoryDataService(data: HistoryData = history_data) {
+        return new HistoryDataService(data);
+    }
+}
+
+export { HistoryDataService, HistoryDataServiceFactory };

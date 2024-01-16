@@ -1,11 +1,3 @@
-interface Skill {
-    title: string;
-    firstUsed: Date;
-    lastUsed: Date;
-    lengthOfUse: number;
-    weight: number;
-}
-
 class Skill {
     title: string;
     firstUsed: Date;

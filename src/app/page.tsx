@@ -1,8 +1,9 @@
+import app from "./app";
 import HeroImage from "@/components/HeroImage";
 import Panel from "@/components/Panel";
 import SkillCloud from "@/components/SkillCloud";
 import WorkHistory from "@/components/WorkHistory";
-import app from "./app";
+import ProjectHistory from "@/components/ProjectHistory";
 
 export default function HomePage() {
     return (
@@ -13,7 +14,7 @@ export default function HomePage() {
                 </div>
             </div>
             <Panel id="about" title={app.lang.translate("Who Am I")}>
-                <p>{app.lang.translate("about")}</p>
+                <p>{app.description}</p>
                 <h3 className="text-xl my-4">
                     {app.lang.translate("Key Strengths")}
                 </h3>
@@ -90,6 +91,9 @@ export default function HomePage() {
             </Panel>
             <Panel id="history" title={app.lang.translate("Where I Have Been")}>
                 <WorkHistory />
+            </Panel>
+            <Panel id="examples" title={app.lang.translate("What I Have Done")}>
+                <ProjectHistory />
             </Panel>
         </div>
     );
