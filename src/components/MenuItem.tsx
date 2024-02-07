@@ -1,14 +1,9 @@
-"use client";
-
-export default function MenuItem({
-    title,
-    action = () => {
-        return;
-    },
-}) {
+const MenuItem = (props: { title: string }) => {
     return (
         <li className="menu-item text-right">
-            <a onClick={action}>{title}</a>
+            <a href={"#"}>{props.title}</a>
         </li>
     );
-}
+};
+
+export default MenuItem;

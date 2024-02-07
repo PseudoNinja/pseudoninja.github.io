@@ -21,7 +21,7 @@ export default function ProjectHistory() {
                         </h2>
                         <div className="date text-mako-700 mb-4">
                             <span className="date-start">
-                                {new Date(project.when).toLocaleDateString(
+                                {new Date(project.start).toLocaleDateString(
                                     app.client_language,
                                     app.DateFormatter
                                 )}
@@ -31,7 +31,7 @@ export default function ProjectHistory() {
                                 className={
                                     project.end != null &&
                                     project.end.toTimeString() ==
-                                        project.when.toTimeString()
+                                        project.start.toTimeString()
                                         ? "hidden"
                                         : ""
                                 }

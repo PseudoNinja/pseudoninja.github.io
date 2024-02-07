@@ -23,10 +23,10 @@ class Applicaiton {
         this.lang = LanguageDataServiceFactory.GetLanguageDataService();
 
         this.title = this.lang.translate(
-            "Eric Miller - Professional Problem Solver & People Leader"
+            "Eric Miller - Full-Stack Engineer & People Leader"
         );
         this.description = this.lang.translate(
-            "Eric Miller is a professional problem solver and people leader from Omaha, Nebraska. Eric is a Full-stack developer with over 20 years of experience as a Principal Software Engineer, Architect, and Development Manager."
+            "Eric Miller is a Full-stack Engineer with over 20 years of experience driving success across diverse industries. He is a Proven leader with 10 years of experience in building high-performing teams, delivering complex projects, and exceeding business goals."
         );
         this.welcome = this.lang.translate("Hello");
     }

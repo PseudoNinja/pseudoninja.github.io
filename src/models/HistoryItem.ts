@@ -1,38 +1,45 @@
-import { Skill } from "./Skill";
+import Skill from "./Skill";
 
-export interface HistoryItemData {
+export interface HistoryItemInterface {
     title: string;
     description: string;
     start: string;
     end: string | null;
-    skills: string[] | null;
+    skills: string[];
+    thumbnail_src: string | null;
+    thumbnail_alt: string | null;
 }
 
-abstract class HistoryItem {
+const BEGINNINGOFTIME: Date = new Date("09/15/2004");
+const TODAY: Date = new Date();
+
+class HistoryItem {
     title: string;
     description: string;
-    when: Date;
-    end: Date | null;
+    start: Date;
+    end: Date;
 
     skills: Skill[];
 
-    constructor(data: HistoryItemData) {
+    thumbnail_src: string | null;
+    thumbnail_alt: string | null;
+
+    constructor(data: HistoryItemInterface) {
         this.title = data.title;
-        this.when = new Date(data.start);
-        this.end = data.end != null ? new Date(data.end) : null;
+        let startDate =
+            data.start != null ? new Date(data.start) : BEGINNINGOFTIME;
+        this.start = startDate;
+        let endDate = data.end != null ? new Date(data.end) : TODAY;
+        this.end = endDate;
         this.description = data.description;
 
-        this.skills = new Array<Skill>();
-        if (data.skills !== null) {
-            this.skills = data.skills.map((m) => {
-                return new Skill(
-                    m,
-                    this.when ?? new Date("09/15/2004"),
-                    this.end ?? new Date()
-                );
-            });
-        }
+        this.skills = data.skills.map(
+            (skill) => new Skill(skill, startDate, endDate)
+        );
+
+        this.thumbnail_src = data.thumbnail_src;
+        this.thumbnail_alt = data.thumbnail_alt;
     }
 }
 
-export { HistoryItem };
+export default HistoryItem;

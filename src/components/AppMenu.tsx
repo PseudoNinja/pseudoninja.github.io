@@ -1,22 +1,16 @@
-"use client";
-
 import app from "@/app/app";
-import MenuButton from "@/components/MenuButton";
 import VerticalMenu from "@/components/VerticalMenu";
-import { ReactNode, useState } from "react";
+import { ReactNode } from "react";
 
-const AppMenu = (props:{ children:ReactNode }) => {
-    const [showMenu, setShowMenu] = useState(false);
-
+const AppMenu = (props: { children: ReactNode }) => {
     return (
         <div className="app-menu bg-opacity-90 bg-slate-500">
-           
-            <VerticalMenu>
-                {props.children}
-            </VerticalMenu>
+            <h2 className="app-menu-title">
+                {app.lang.translate("Navigation")}
+            </h2>
+            <VerticalMenu>{props.children}</VerticalMenu>
         </div>
     );
-}
-
+};
 
 export default AppMenu;

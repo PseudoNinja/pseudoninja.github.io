@@ -1,21 +1,24 @@
 class Skill {
     title: string;
-    firstUsed: Date;
-    lastUsed: Date;
+    firstUsed: Date = new Date("09/15/2004");
+    lastUsed: Date = new Date();
     lengthOfUse: number = 0.0;
     weight: number = 0.0;
 
-    constructor(title: string, firstUsed: Date, lastUsed: Date) {
+    constructor(
+        title: string,
+        firstUsed: Date = new Date("09/15/2004"),
+        lastUsed: Date = new Date()
+    ) {
         this.title = title;
-        this.firstUsed = firstUsed;
-        this.lastUsed = lastUsed;
+        this.lengthOfUse = this._calcuateLengthOfUse();
         this.weight = this._calculateWeight();
     }
 
     private _calculateWeight(): number {
         let weight = 0;
 
-        weight += this._calcuateRatio();
+        weight += this._calcuateUsageRatio();
         weight += this._calculateTwoYearRatio();
         return weight;
     }
@@ -28,7 +31,7 @@ class Skill {
         return new Date().getTime() - new Date("2004/01/01").getTime();
     }
 
-    private _calcuateRatio(): number {
+    private _calcuateUsageRatio(): number {
         return this._calcuateLengthOfUse() / this._calculateTotalLength();
     }
 
@@ -46,4 +49,4 @@ class Skill {
     }
 }
 
-export { Skill };
+export default Skill;

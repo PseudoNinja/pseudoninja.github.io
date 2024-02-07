@@ -1,56 +1,63 @@
-import { HistoryItem } from "@/models/HistoryItem";
-import {
-    ProjectHistoryItem,
-    ProjectHistoryItemData,
-} from "@/models/ProjectHistoryItem";
-import { Skill } from "@/models/Skill";
-import { WorkHistoryItem, WorkHistoryItemData } from "@/models/WorkHistoryItem";
 import history_data from "@data/history.json";
 
-export interface HistoryData {
-    workHistory: WorkHistoryItemData[];
-    projects: ProjectHistoryItemData[];
+import Skill from "@/models/Skill";
+import HistoryItem, { HistoryItemInterface } from "@/models/HistoryItem";
+
+const BEGINNINGOFTIME: Date = new Date("09/15/2004");
+const TODAY: Date = new Date();
+
+interface HistoryDataInterface {
+    workHistory: HistoryItemInterface[];
+    projects: HistoryItemInterface[];
 }
 
 class HistoryDataService {
-    workHistory: WorkHistoryItem[];
-    projects: ProjectHistoryItem[];
+    work: HistoryItem[];
+    projects: HistoryItem[];
 
-    constructor(data: HistoryData) {
-        this.workHistory = data.workHistory.map((w) => new WorkHistoryItem(w));
-        this.projects = data.projects.map((p) => new ProjectHistoryItem(p));
+    constructor(data: HistoryDataInterface) {
+        this.work = data.workHistory.map((w) => new HistoryItem(w));
+        this.projects = data.projects.map((p) => new HistoryItem(p));
     }
 
-    public getWorkHistoryItems(): WorkHistoryItem[] {
-        return this.workHistory;
-    }
+    public getWorkHistoryItems = () => {
+        return this.work;
+    };
 
-    public getProjectHistoryItems(): ProjectHistoryItem[] {
+    public getProjectHistoryItems = () => {
         return this.projects;
-    }
+    };
 
-    public getSkills(): Array<Skill> {
+    private _getSkillsFrom = (historyCollection: HistoryItem[]): Skill[] => {
         let skills: Array<Skill> = new Array<Skill>();
-        this.workHistory.forEach((history_item) => {
-            history_item.skills.forEach((skill) => {
-                skill.firstUsed = history_item.when;
-                skill.lastUsed = history_item.end ?? new Date();
+        historyCollection.forEach((history_item) => {
+            history_item.skills.forEach((skill: Skill) => {
+                skill.firstUsed = history_item.start ?? BEGINNINGOFTIME;
+                skill.lastUsed = history_item.end ?? TODAY;
             });
 
             skills = skills.concat(history_item.skills);
         });
-        this.projects.forEach((history_item) => {
-            history_item.skills.forEach((skill) => {
-                skill.firstUsed = history_item.when;
-                skill.lastUsed = history_item.end ?? new Date();
-            });
-            skills = skills.concat(history_item.skills);
-        });
-
         return skills;
-    }
+    };
 
-    public getCloudSkills() {
+    public getWorkSkills = (): Skill[] => {
+        return this._getSkillsFrom(this.work);
+    };
+
+    public getProjectSkills = (): Skill[] => {
+        return this._getSkillsFrom(this.projects);
+    };
+
+    public getSkills = (): Skill[] => {
+        let skills: Skill[] = [
+            ...this.getProjectSkills(),
+            ...this.getWorkSkills(),
+        ];
+        return skills;
+    };
+
+    public getDistinctSkills = (): Skill[] => {
         let skills = this.getSkills();
         let distinct = skills.reduce((accumulator: Skill[], current: Skill) => {
             if (!accumulator.some((skill) => skill.title === current.title)) {
@@ -59,7 +66,6 @@ class HistoryDataService {
 
             return accumulator;
         }, []);
-
         distinct.forEach((skill) => {
             skills
                 .filter((f) => f.title === skill.title)
@@ -67,13 +73,26 @@ class HistoryDataService {
                     skill.weight += match.weight;
                 });
         });
-
         return distinct;
-    }
+    };
+
+    public getCloudSkills = (): Skill[] => {
+        const skills = [...this.getDistinctSkills()]; // Create a shallow copy to avoid modifying the original array
+
+        // shuffle skils so they dont appear in the same order
+        for (let i = skills.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [skills[i], skills[j]] = [skills[j], skills[i]];
+        }
+
+        return skills;
+    };
 }
 
 class HistoryDataServiceFactory {
-    public static GetHistoryDataService(data: HistoryData = history_data) {
+    public static GetHistoryDataService(
+        data: HistoryDataInterface = history_data
+    ) {
         return new HistoryDataService(data);
     }
 }
