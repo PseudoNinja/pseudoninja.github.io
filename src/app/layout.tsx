@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import app from "./app";
-import HeroImage from "@/components/HeroImage";
-import { useEffect, useState } from "react";
 
 export const metadata: Metadata = {
     title: app.title,

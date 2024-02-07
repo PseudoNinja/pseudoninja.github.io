@@ -1,14 +1,12 @@
 import Image from "next/image";
 
-const Icon = ({ title = "", src = "", size = 0, color = "" }) => {
+const Icon = (props: { title: string; src: string; alt: string }) => {
     return (
         <i className="icon-wrapper text-white">
             <Image
                 className="icon"
-                src={src}
-                height={size}
-                width={size}
-                alt={title}
+                src={props.src}
+                alt={props.alt.length > 0 ? props.alt : props.title}
             />
         </i>
     );

@@ -4,33 +4,26 @@ import Panel from "@/components/Panel";
 import SkillCloud from "@/components/SkillCloud";
 import WorkHistory from "@/components/WorkHistory";
 import ProjectHistory from "@/components/ProjectHistory";
+import AppHeader from "@/components/AppHeader";
 
 export default function HomePage() {
     return (
         <div
-            id="container"
-            className="w-full h-screen flex flex-col content-center overscroll-none"
+            id="app"
+            className="app w-full h-screen flex flex-col content-center overscroll-none"
         >
-            <aside className="grow-0 p-4 bg-sky-500 text-white border-collapse border-none flex">
-                <h1 id="site-title" className="hidden">
-                    {app.title}
-                </h1>
-                <span id="welcome" className="text-2xl">
-                    {app.welcome}
-                </span>
-                <div className="spacer flex-1"></div>
-                <div className="invisible">
-                    <HeroImage size={32} />
-                </div>
-            </aside>
-            <main className="grow overflow-y-auto">
+            <AppHeader />
+            <main id="app-content" className="grow overflow-y-auto">
                 <div
                     id="homepage-container"
                     className="flex flex-col border-none"
                 >
-                    <div className="bg-picton-blue-500 h-32 flex justify-center overflow-visible mb-20">
+                    <div
+                        id="hero-image-container"
+                        className="bg-picton-blue-500 h-32 flex justify-center overflow-visible mb-20"
+                    >
                         <div className="bg-picton-blue-500 h-48 w-48 flex justify-center rounded-full">
-                            <HeroImage size={150} />
+                            <HeroImage id="content-logo" size={150} />
                         </div>
                     </div>
                     <Panel id="about" title={app.lang.translate("Who Am I")}>
@@ -125,42 +118,6 @@ export default function HomePage() {
                     </Panel>
                 </div>
             </main>
-            {/* <aside className="grow-0 p-4 bg-sky-500 text-white border-collapse border-none flex justify-center">
-                        <MenuButton />
-                    </aside> */}
-            {/* <footer
-                        id="dashhboard-footer"
-                        className="grow-0 p-4 bg-mako-700 flex justify-between rounded-t-lg"
-                    >
-                        <button
-                            type="button"
-                            className="w-20 h-20 rounded-full bg-white text-center"
-                        >
-                            <i className="icon"></i>
-                            {app.lang.translate("LinkedIn")}
-                        </button>
-                        <button
-                            type="button"
-                            className="w-20 h-20 rounded-full bg-white"
-                        >
-                            <i className="icon"></i>
-                            {app.lang.translate("Message")}
-                        </button>
-                        <button
-                            type="button"
-                            className="w-20 h-20 rounded-full bg-white"
-                        >
-                            <i className="icon"></i>
-                            {app.lang.translate("GitHub")}
-                        </button>
-                        <button
-                            type="button"
-                            className="w-20 h-20 rounded-full bg-white"
-                        >
-                            <i className="icon"></i>
-                            {app.lang.translate("X")}
-                        </button>
-                    </footer> */}
         </div>
     );
 }

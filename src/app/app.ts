@@ -4,7 +4,7 @@ import {
 } from "../services/LanguageDataService";
 
 class Applicaiton {
-    static DEFAULT_CLIENT_LANGUAGE = "en-US";
+    public static readonly DEFAULT_CLIENT_LANGUAGE = "en-US";
 
     client_language: string;
     lang: LanguageDataService;
