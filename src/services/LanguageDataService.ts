@@ -1,44 +1,76 @@
 /** Multi-Language Support Data Service **/
 
-import { FileService } from "./FileService";
+import { DataService } from "./DataService";
 
-const DEFAULT_LANGUAGE = "en-us";
-const DEFAULT_DATA_PATH = "data/";
+import languageData from "@data/lang.json";
 
-export interface LanguageData {
-    [key: string]: string;
+enum Language {
+    ENGLISH = "en",
+    CHINENSE_SIMPLIFIED = "zh-Hans",
+    CHINESE_TRADITIONAL = "zh-TW",
+    SPANISH = "es",
+    ARABIC = "ar",
+    PORTUGUESE = "pt",
+    INDONESIAN = "id",
+    FRENCH = "fr",
+    JAPANESE = "ja",
+    RUSSIAN = "ru",
+    GERMAN = "de",
 }
 
-class LanguageDataService {
-    language_pack: LanguageData;
+const DEFAULT_LANGUAGE = Language.ENGLISH;
+
+interface LanguageRecord {
+    en: string;
+    "zh-Hans": string;
+    "zh-TW": string;
+    es: string;
+    ar: string;
+    pt: string;
+    id: string;
+    fr: string;
+    ja: string;
+    ru: string;
+    de: string;
+}
+class LanguageDataService extends DataService {
+    _data: Array<LanguageRecord>;
+    _client_language: Language;
 
     constructor(
-        language: string = DEFAULT_LANGUAGE,
-        data_path: string = DEFAULT_DATA_PATH
+        data: Array<LanguageRecord> = new Array<LanguageRecord>(),
+        language: Language = DEFAULT_LANGUAGE
     ) {
-        let language_file_path = data_path + "lang." + language + ".json";
-        if (!FileService.FileExists(language_file_path)) {
-            // if doesnt exist, use default while file is generated
-            language_file_path =
-                data_path + "lang." + DEFAULT_LANGUAGE + ".json";
-        }
-
-        this.language_pack = this._loadLanguagePackFromFile(language_file_path);
+        super();
+        this._data = data;
+        this._client_language = language;
     }
-
-    private _loadLanguagePackFromFile(
-        language_file_path: string = DEFAULT_LANGUAGE
-    ): LanguageData {
-        return <LanguageData>FileService.Parse(language_file_path);
-    }
-
-    translate(original: string): string {
-        let value = this.language_pack[original];
-        if (value == null) {
-            value = original;
+    translate(
+        str: string,
+        to: Language = this._client_language,
+        from: Language = DEFAULT_LANGUAGE
+    ): string {
+        let translated: string = str;
+        if (from != to) {
+            let record: LanguageRecord = this._data.filter(
+                (f) => f[from] === str
+            )[0];
+            if (record !== undefined) {
+                translated = record[to];
+            }
         }
-        return value;
+        return translated;
     }
 }
 
-export { LanguageDataService };
+class LanguageDataServiceFactory {
+    static GetLanguageDataService(
+        data: Array<LanguageRecord> = languageData,
+        client_language: string = <string>DEFAULT_LANGUAGE
+    ) {
+        let language: Language = client_language as Language;
+        return new LanguageDataService(data, language);
+    }
+}
+
+export { LanguageDataService, LanguageDataServiceFactory };

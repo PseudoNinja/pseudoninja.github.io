@@ -1,227 +1,360 @@
-[
-    {
-        "what": "Application Development Leader",
-        "where": "Orion Advisor Technology",
-        "start": "2021-12",
-        "end": "2023-10",
-        "description": "Led two high-performing, fully-remote teams: The Performance Squad built and maintained systems for real-time and scheduled trading performance analysis with historical and trending data. The Reporting Squad: Developed a drag-and-drop tool for traders and brokers to create and manage custom reports, along with APIs for seamless integration with other teams. Key Responsibilities: Managed daily operations in a hybrid role serving as the Development Manager and Scrum Master, Eliminated unnecessary meetings using Agile methodologies (Azure DevOps and Jira), Handled resource management for 8 developers, including reviews, hiring, training, and release verification; Improved team efficiency through DataDog monitoring and real-time data visualization; Delivered weekly metric reports for senior leadership utilizing Jira Reporting, Azure DevOps, Power BI, Sharepoint, and PowerPoint; Achieved significant reduction in production bugs and production incidents while also increasing development velocity.",
-        "skills": [
-            "AWS",
-            "DataDog",
-            "Visual Studio",
-            ".NET",
-            "C#",
-            "HTML",
-            "Angular",
-            "AngularJS",
-            "Software as a Service (SaaS)",
-            "Micro-Services",
-            "Git",
-            "Jira",
-            "Azure Dev Ops",
-            "workplace",
-            "Microsoft Teams",
-            "Zoom",
-            "Sharepoint",
-            "Excel",
-            "Power Automate"
-        ]
-    },
-    {
-        "what": "Principal Software Engineer",
-        "where": "Moody’s Analytics",
-        "start": "2014-09",
-        "end": "2021-12",
-        "description": "Led strategic development & execution for a vital web app: Managed a 12-engineer team serving 800+ global clients ($40M annual portfolio); Shaped industry-relevant development standards & training programs; Guided team through Agile practices as Scrum Master & coach; Ensured high-quality code & user experience through reviews & testing; Contributed to full-stack development when needed; Hired as Senior Software Engineer; Promoted to Lead Software Engineer in 2016; Promoted to Principal Software Engineer in 2020.",
-        "skills": [
-            "SQL",
-            ".NET",
-            "C#",
-            "HTML5",
-            "CSS",
-            "LESS",
-            "SASS",
-            "JavaScript",
-            "TypeScript",
-            "WCF Services",
-            "SaaS",
-            "micro-services",
-            "Serverless architecture",
-            "Azure",
-            " AWS",
-            "jQuery",
-            "Git"
-        ]
-    },
-    {
-        "what": "Senior Consultant",
-        "where": "Midwest Cloud Computing",
-        "start": "2013-08",
-        "end": "2014-09",
-        "description": "Served as application architect for startup company in the human resources sector. Product design centralized around a mobile-first approach  using cognitive and EQ analysis of people to build cohesive teams.",
-        "skills": [
-            ".NET",
-            "C#",
-            "PostgreSQL",
-            "Angular",
-            "Bootstrap",
-            "HTML",
-            "CSS",
-            "SASS",
-            "JavaScript",
-            "Azure",
-            "IIS ",
-            "jQuery"
-        ]
-    },
-    {
-        "what": "Senior Consultant",
-        "where": "Capstone Consulting",
-        "start": "2012-01",
-        "end": "2013-07",
-        "description": "Designed and developed web applications to include Hardware Architecture, Data Architecture, Business Process Logic, and supporting services for thin-client applications in the agriculture industry. Architected the data migration from third-party product to Azure Cloud Application. Implemented thin-client web applications with WCF and rest services. Develop Android toolbox activities for potential projects. Evaluated PhoneGap Applications. Migrated Drupal Instance from MySQL to PostgreSQL. Created Web Service API for RESTful requests to access Drupal-managed resources.",
-        "skills": [
-            "SQL",
-            ".NET",
-            "C#",
-            "Angular",
-            "HTML",
-            "CSS",
-            "Azure",
-            "WCF",
-            "Rest",
-            "MySQL",
-            "Android",
-            "PhoneGap",
-            "Drupal",
-            "PostgreSQL",
-            "IIS",
-            "Apache"
-        ]
-    },
-    {
-        "what": "Consultant",
-        "where": "Client Resources Inc.",
-        "start": "2011-08",
-        "end": "2012-05",
-        "description": "Supported internal applications by developing front-end interfaces for internal applications in Angular, TypeScript, and SCSS. Supported the development of a multitude of Android-based mobile apps. Developed Vanilla JavaScript-driven web application wrappers for the financial sector.",
-        "skills": [
-            "HTML",
-            "Angular",
-            "TypeScript",
-            "SCSS",
-            "CSS",
-            "Javascript",
-            "jQuery"
-        ]
-    },
-    {
-        "what": "Webmaster",
-        "where": "Medico Insurance",
-        "start": "2009-09",
-        "end": "2011-06",
-        "description": "Managed and modernized enterprise web environment: Led a team of 4 engineers developing and maintaining 4 Java web applications; Upgraded application stack (Tomcat, JDK) and implemented project lifecycle methodology; Built a two-tier API middleware for enhanced integration; Administered Windows servers and implemented a modern web strategy; Migrated 3 HTML sites to Drupal CMS and built mobile-friendly interfaces (PHP, HTML5, CSS3, jQuery);",
-        "skills": [
-            "Java",
-            "J2EE",
-            "JSP",
-            "STruts",
-            "Tomcat",
-            "API",
-            "Windows Server",
-            "Drupal",
-            "PHP",
-            "HTML",
-            "CSS",
-            "jQuery",
-            "mobile-web"
-        ]
-    },
-    {
-        "what": "Webmaster / Lead Coordinator",
-        "where": "The Nebraska Medical Center",
-        "start": "2008-07",
-        "end": "2009-08",
-        "description": "Led hospital web strategy & operations: Managed a 12-person team developing and maintaining the hospital's online presence; Collaborated with marketing leadership to align web initiatives with marketing goals; Implemented social media campaigns and coordinated key communications; Provided disaster management communications support.",
-        "skills": [
-            ".NET",
-            "C#",
-            "IIS",
-            "SQL",
-            "Rest",
-            "HTML",
-            "JavaScript",
-            "CSS",
-            "Social Media"
-        ]
-    },
-    {
-        "what": "Webmaster",
-        "where": "RSI Medical Staffing",
-        "start": "2006-04",
-        "end": "2008-06",
-        "description": "Led high-impact enterprise application development: Managed a web team of 4 to engineer, administer, and deliver a $7 million enterprise application; Boosted staff performance by 30%, slashed waste by 65% and recovered $1.7 million in annual lost revenue; Demonstrated leadership capacity by serving as interim IT Director for 6 months.",
-        "skills": [
-            "ASP.NET",
-            "Visual Basic",
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Infrastructure",
-            "Networking",
-            "UI",
-            "UX"
-        ]
-    },
-    {
-        "what": "Executive Support Applications Developer",
-        "where": "PayPal Inc.",
-        "start": "2005-11",
-        "end": "2006-03",
-        "description": "Developed PHP enterprise applications in direct support of Executive Leadership missions; Administered two Slackware Linux Servers (LAMP Stack), and one Windows 2003 Server (WAMP Stack).",
-        "skills": [
-            "Linux",
-            "Apache",
-            "MySQL",
-            "PHP",
-            " HTML",
-            " JavaScript",
-            "CSS",
-            "Rest",
-            "IIS",
-            "Windows Server"
-        ]
-    },
-    {
-        "what": "Web Systems Engineer",
-        "where": "Creighton University",
-        "start": "2004-09",
-        "end": "2005-11",
-        "description": "Senior Typo3 CMS Developer/Administrator; Developed training materials for users and Admins; Designed 508 W3C Compliant templates.",
-        "skills": [
-            "Linux",
-            "Apache",
-            "MySQL",
-            "PHP",
-            "HTML",
-            "JavaScript",
-            "CSS",
-            "Typo3"
-        ]
-    },
-    {
-        "what": "Web Developer Internship",
-        "where": "Union Pacific Railroad",
-        "start": "2004-01",
-        "end": "2004-09",
-        "description": "Developed Cold Fusion applications and Flash Components while administering SQL databases and created reports for the Mechanical Division in support of the Union Pacific Railroad global mission.",
-        "skills": [
-            "Cold Fusion",
-            "Flash",
-            "Crystal Reports",
-            "SQL",
-            "Java",
-            "Tibco"
-        ]
-    }
-]
+{
+    "workHistory": [
+        {
+            "title": "Application Development Leader",
+            "where": "Orion Advisor Technology",
+            "start": "2021-12",
+            "end": "2023-10",
+            "description": "Led two high-performing, fully-remote teams: The Performance Squad built and maintained systems for real-time and scheduled trading performance analysis with historical and trending data. The Reporting Squad: Developed a drag-and-drop tool for traders and brokers to create and manage custom reports, along with APIs for seamless integration with other teams. Key Responsibilities: Managed daily operations in a hybrid role serving as the Development Manager and Scrum Master, Eliminated unnecessary meetings using Agile methodologies (Azure DevOps and Jira), Handled resource management for 8 developers, including reviews, hiring, training, and release verification; Improved team efficiency through DataDog monitoring and real-time data visualization; Delivered weekly metric reports for senior leadership utilizing Jira Reporting, Azure DevOps, Power BI, Sharepoint, and PowerPoint; Achieved significant reduction in production bugs and production incidents while also increasing development velocity.",
+            "skills": [
+                "AWS",
+                "DataDog",
+                "Visual Studio",
+                ".NET",
+                "C#",
+                "HTML",
+                "Angular",
+                "AngularJS",
+                "Software as a Service (SaaS)",
+                "Micro-Services",
+                "Git",
+                "Jira",
+                "Azure Dev Ops",
+                "workplace",
+                "Microsoft Teams",
+                "Zoom",
+                "Sharepoint",
+                "Excel",
+                "Power Automate"
+            ],
+            "thumbnail_src": "",
+            "thumbnail_alt": ""
+        },
+        {
+            "title": "Principal Software Engineer",
+            "where": "Moody’s Analytics",
+            "start": "2014-09",
+            "end": "2021-12",
+            "description": "Led strategic development & execution for a vital web app: Managed a 12-engineer team serving 800+ global clients ($40M annual portfolio); Shaped industry-relevant development standards & training programs; Guided team through Agile practices as Scrum Master & coach; Ensured high-quality code & user experience through reviews & testing; Contributed to full-stack development when needed; Hired as Senior Software Engineer; Promoted to Lead Software Engineer in 2016; Promoted to Principal Software Engineer in 2020.",
+            "skills": [
+                "SQL",
+                ".NET",
+                "C#",
+                "HTML",
+                "Cascasding Style Sheets (CSS)",
+                "LESS",
+                "SASS",
+                "JavaScript",
+                "TypeScript",
+                "WCF Services",
+                "SaaS",
+                "micro-services",
+                "Serverless architecture",
+                "Azure",
+                " AWS",
+                "jQuery",
+                "Git"
+            ],
+            "thumbnail_src": "",
+            "thumbnail_alt": ""
+        },
+        {
+            "title": "Senior Consultant",
+            "where": "Midwest Cloud Computing",
+            "start": "2013-08",
+            "end": "2014-09",
+            "description": "Served as application architect for startup company in the human resources sector. Product design centralized around a mobile-first approach  using cognitive and EQ analysis of people to build cohesive teams.",
+            "skills": [
+                ".NET",
+                "C#",
+                "PostgreSQL",
+                "Angular",
+                "Bootstrap",
+                "HTML",
+                "Cascasding Style Sheets (CSS)",
+                "SASS",
+                "JavaScript",
+                "Azure",
+                "IIS ",
+                "jQuery"
+            ],
+            "thumbnail_src": "",
+            "thumbnail_alt": ""
+        },
+        {
+            "title": "Senior Consultant",
+            "where": "Capstone Consulting",
+            "start": "2012-01",
+            "end": "2013-07",
+            "description": "Designed and developed web applications to include Hardware Architecture, Data Architecture, Business Process Logic, and supporting services for thin-client applications in the agriculture industry. Architected the data migration from third-party product to Azure Cloud Application. Implemented thin-client web applications with WCF and rest services. Develop Android toolbox activities for potential projects. Evaluated PhoneGap Applications. Migrated Drupal Instance from MySQL to PostgreSQL. Created Web Service API for RESTful requests to access Drupal-managed resources.",
+            "skills": [
+                "SQL",
+                ".NET",
+                "C#",
+                "Angular",
+                "HTML",
+                "Cascasding Style Sheets (CSS)",
+                "Azure",
+                "WCF",
+                "Rest",
+                "MySQL",
+                "Android",
+                "PhoneGap",
+                "Drupal",
+                "PostgreSQL",
+                "IIS",
+                "Apache"
+            ],
+            "thumbnail_src": "",
+            "thumbnail_alt": ""
+        },
+        {
+            "title": "Consultant",
+            "where": "Client Resources Inc.",
+            "start": "2011-08",
+            "end": "2012-05",
+            "description": "Supported internal applications by developing front-end interfaces for internal applications in Angular, TypeScript, and SCSS. Supported the development of a multitude of Android-based mobile apps. Developed Vanilla JavaScript-driven web application wrappers for the financial sector.",
+            "skills": [
+                "HTML",
+                "Angular",
+                "TypeScript",
+                "SCSS",
+                "Cascasding Style Sheets (CSS)",
+                "Javascript",
+                "jQuery"
+            ],
+            "thumbnail_src": "",
+            "thumbnail_alt": ""
+        },
+        {
+            "title": "Webmaster",
+            "where": "Medico Insurance",
+            "start": "2009-09",
+            "end": "2011-06",
+            "description": "Managed and modernized enterprise web environment: Led a team of 4 engineers developing and maintaining 4 Java web applications; Upgraded application stack (Tomcat, JDK) and implemented project lifecycle methodology; Built a two-tier API middleware for enhanced integration; Administered Windows servers and implemented a modern web strategy; Migrated 3 HTML sites to Drupal CMS and built mobile-friendly interfaces (PHP, HTML, CSS3, jQuery);",
+            "skills": [
+                "Java",
+                "J2EE",
+                "JSP",
+                "Struts",
+                "Tomcat",
+                "API",
+                "Windows Server",
+                "Drupal",
+                "PHP",
+                "HTML",
+                "Cascasding Style Sheets (CSS)",
+                "jQuery",
+                "mobile-web"
+            ],
+            "thumbnail_src": "",
+            "thumbnail_alt": ""
+        },
+        {
+            "title": "Webmaster / Lead Coordinator",
+            "where": "The Nebraska Medical Center",
+            "start": "2008-07",
+            "end": "2009-08",
+            "description": "Led hospital web strategy & operations: Managed a 12-person team developing and maintaining the hospital's online presence; Collaborated with marketing leadership to align web initiatives with marketing goals; Implemented social media campaigns and coordinated key communications; Provided disaster management communications support.",
+            "skills": [
+                ".NET",
+                "C#",
+                "IIS",
+                "SQL",
+                "Rest",
+                "HTML",
+                "JavaScript",
+                "Cascasding Style Sheets (CSS)",
+                "Social Media"
+            ],
+            "thumbnail_src": "",
+            "thumbnail_alt": ""
+        },
+        {
+            "title": "Webmaster",
+            "where": "RSI Medical Staffing",
+            "start": "2006-04",
+            "end": "2008-06",
+            "description": "Led high-impact enterprise application development: Managed a web team of 4 to engineer, administer, and deliver a $7 million enterprise application; Boosted staff performance by 30%, slashed waste by 65% and recovered $1.7 million in annual lost revenue; Demonstrated leadership capacity by serving as interim IT Director for 6 months.",
+            "skills": [
+                "ASP.NET",
+                "Visual Basic",
+                "HTML",
+                "Cascasding Style Sheets (CSS)",
+                "JavaScript",
+                "Infrastructure",
+                "Networking",
+                "User Interface (UI) Design",
+                "User Experience (UX)"
+            ],
+            "thumbnail_src": "",
+            "thumbnail_alt": ""
+        },
+        {
+            "title": "Executive Support Applications Developer",
+            "where": "PayPal Inc.",
+            "start": "2005-11",
+            "end": "2006-03",
+            "description": "Developed PHP enterprise applications in direct support of Executive Leadership missions; Administered two Slackware Linux Servers (LAMP Stack), and one Windows 2003 Server (WAMP Stack).",
+            "skills": [
+                "Linux",
+                "Apache",
+                "MySQL",
+                "PHP",
+                " HTML",
+                " JavaScript",
+                "Cascasding Style Sheets (CSS)",
+                "Rest",
+                "IIS",
+                "Windows Server"
+            ],
+            "thumbnail_src": "",
+            "thumbnail_alt": ""
+        },
+        {
+            "title": "Web Systems Engineer",
+            "where": "Creighton University",
+            "start": "2004-09",
+            "end": "2005-11",
+            "description": "Senior Typo3 CMS Developer/Administrator; Developed training materials for users and Admins; Designed 508 W3C Compliant templates.",
+            "skills": [
+                "Linux",
+                "Apache",
+                "MySQL",
+                "PHP",
+                "HTML",
+                "JavaScript",
+                "Cascasding Style Sheets (CSS)",
+                "Typo3"
+            ],
+            "thumbnail_src": "",
+            "thumbnail_alt": ""
+        },
+        {
+            "title": "Web Developer Internship",
+            "where": "Union Pacific Railroad",
+            "start": "2004-01-01",
+            "end": "2004-09-15",
+            "description": "Developed Cold Fusion applications and Flash Components while administering SQL databases and created reports for the Mechanical Division in support of the Union Pacific Railroad global mission.",
+            "skills": [
+                "Cold Fusion",
+                "Flash",
+                "Crystal Reports",
+                "SQL",
+                "Java",
+                "Tibco"
+            ],
+            "thumbnail_src": "",
+            "thumbnail_alt": ""
+        }
+    ],
+    "projects": [
+        {
+            "title": "Python Image Conversion Script",
+            "description": "I was contacted by a member of a local Historical Society with an issue regarding some image files they had created from scanned documents. The documents were scanned in 600 DPI large format TIFF, which took up approximately 29GB of storage. With their limited budget, It would be important to get the images compressed down to a reasonable size but still be usable. It would have taken weeks to manually convert or months to rescan all of the documents.  I wrote a multithreaded Python script that traversed the 29GB directory and identified images with a TIFF format. The script then converted them to a JPEG image file format reducing the overall file size by approximately 66%.",
+            "start": "2024-01-10",
+            "end": "2024-01-10",
+            "skills": ["Python", "PyTest"],
+            "link": "https://github.com/PseudoNinja/py_scripts",
+            "thumbnail_src": "",
+            "thumbnail_alt": ""
+        },
+        {
+            "title": "pseudoninja.com",
+            "description": "Personal portfolio site I used to learn my way around React, Next.js, and Tailwind.",
+            "start": "2024-01-01",
+            "end": null,
+            "skills": [
+                "Git",
+                "GitHub",
+                "GitHub Actions",
+                "React",
+                "Tailwind",
+                "Next.js",
+                "JavaScript",
+                "TypeScript",
+                "Visual Studio Code",
+                "Progressive Web Apps (PWA)",
+                "Logo Design",
+                "Vector Graphics",
+                "User Interface (UI) Design",
+                "User Experience (UX)"
+            ],
+            "thumbnail_src": "",
+            "thumbnail_alt": "",
+            "link": "https://github.com/PseudoNinja/pseudoninja.github.io"
+        },
+        {
+            "title": "rammastertraining.com",
+            "description": "Converted an outdated static HTML pages to a Wordpress site for a local firearms insructor; Integrated online ticketing system and other third party plugins; web hosting migration, domain and certificate management, Image manipulation and optimization, SEO, search submission, and social media integration.",
+            "start": "2022-10-01",
+            "end": "2023-06-01",
+            "skills": [
+                "DNS",
+                "Wordpress",
+                "Wordpress Plugins",
+                "Certificaite Management",
+                "Image Manipulation",
+                "SEO",
+                "Search Submission",
+                "Facebook",
+                "Twitter"
+            ],
+            "thumbnail_src": "",
+            "thumbnail_alt": ""
+        },
+        {
+            "title": "daishotactical.com",
+            "description": "Created a shopify store front from the ground up for a local vendor.",
+            "start": "2021-10-01",
+            "end": "2022-07-01",
+            "skills": [
+                "Shopify",
+                "Certificaite Management",
+                "Image Manipulation",
+                "SEO",
+                "Search Submission",
+                "Graphic Design",
+                "Photography"
+            ],
+            "thumbnail_src": "/daisho-tactical-logo.png",
+            "thumbnail_alt": ""
+        },
+        {
+            "title": "susanmiller.vote",
+            "description": "Created a wordpress site for local political candidate.",
+            "start": "2021-11-01",
+            "end": "2022-11-01",
+            "skills": [
+                "Wordpress",
+                "Certificaite Management",
+                "Image Manipulation",
+                "SEO",
+                "Search Submission",
+                "Graphic Design",
+                "Stripe",
+                "Donors Choose",
+                "User Experience (UX)",
+                "User Interface (UI) Design",
+                "Copywrite"
+            ],
+            "thumbnail_src": "",
+            "thumbnail_alt": ""
+        },
+        {
+            "title": "AWS Deepracer",
+            "description": "AWS DeepRacer gives you an interesting and fun way to get started with reinforcement learning (RL). RL is an advanced machine learning (ML) technique that takes a very different approach to training models than other machine learning methods. Its super power is that it learns very complex behaviors without requiring any labeled training data, and can make short term decisions while optimizing for a longer term goal.",
+            "start": "2020-07-29",
+            "end": "2020-07-29",
+            "skills": [
+                "Python",
+                "Machine Learning (ML)",
+                "Reinformcement Learning (RL)"
+            ],
+            "link": "https://youtube.com/shorts/ac2kbC3LzI0?feature=share",
+            "github_source": "https://github.com/PseudoNinja/deepracer-2020.2",
+            "thumbnail_src": "thumbnail-deep-racer.jpg",
+            "thumbnail_alt": "A photograph of a computer screen with the sillouette of a black car in the middle of the screen on a low reselution race track with green grass, black and white track border, black retaining walls, and blue sky."
+        }
+    ]
+}

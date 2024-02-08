@@ -1,42 +1,108 @@
-import { HistoryItem } from "@/models/HistoryItem";
-import { Skill } from "@/models/Skill";
 import history_data from "@data/history.json";
 
+import Skill from "@/models/Skill";
+import HistoryItem, { HistoryItemInterface } from "@/models/HistoryItem";
+
+const BEGINNINGOFTIME: Date = new Date("09/15/2004");
+const TODAY: Date = new Date();
+
+interface HistoryDataInterface {
+    workHistory: HistoryItemInterface[];
+    projects: HistoryItemInterface[];
+}
+
 class HistoryDataService {
-    _data: Array<HistoryItem>;
+    work: HistoryItem[];
+    projects: HistoryItem[];
 
-    constructor(data: Array<Object> = history_data) {
-        this._data = new Array<HistoryItem>();
-        this._parse(data);
+    constructor(data: HistoryDataInterface) {
+        this.work = data.workHistory.map((w) => new HistoryItem(w));
+        this.projects = data.projects.map((p) => new HistoryItem(p));
     }
 
-    private _parse(data: Array<Object>) {
-        data.forEach((history_item) => {
-            this._data.push(<HistoryItem>history_item);
-        });
-    }
+    public getWorkHistoryItems = () => {
+        return this.work;
+    };
 
-    public getHistoryItems(): Array<HistoryItem> {
-        return this._data;
-    }
+    public getProjectHistoryItems = () => {
+        return this.projects;
+    };
 
-    public getSkills(): Array<Skill> {
-        let skills: Array<Skill> = [];
-        this._data.forEach((history_item) => {
+    private _getSkillsFrom = (historyCollection: HistoryItem[]): Skill[] => {
+        let skills: Array<Skill> = new Array<Skill>();
+        historyCollection.forEach((history_item) => {
+            history_item.skills.forEach((skill: Skill) => {
+                skill.firstUsed = history_item.start ?? BEGINNINGOFTIME;
+                skill.lastUsed = history_item.end ?? TODAY;
+            });
+
             skills = skills.concat(history_item.skills);
         });
         return skills;
-    }
+    };
 
-    public getSkillCloudData(): Array<Skill> {
-        let skills: Array<Skill> = this.getSkills().filter(
-            (value, index, array) => {
-                return array.indexOf(value) === index;
+    public getWorkSkills = (): Skill[] => {
+        return this._getSkillsFrom(this.work);
+    };
+
+    public getProjectSkills = (): Skill[] => {
+        return this._getSkillsFrom(this.projects);
+    };
+
+    public getSkills = (): Skill[] => {
+        let skills: Skill[] = [
+            ...this.getProjectSkills(),
+            ...this.getWorkSkills(),
+        ];
+        return skills;
+    };
+
+    public getDistinctSkills = (): Skill[] => {
+        let skills = this.getSkills();
+        let distinct = skills.reduce((accumulator: Skill[], current: Skill) => {
+            if (!accumulator.some((skill) => skill.title === current.title)) {
+                accumulator.push(current);
             }
+
+            return accumulator;
+        }, []);
+        distinct.forEach((skill) => {
+            skills
+                .filter((f) => f.title === skill.title)
+                .forEach((match) => {
+                    skill.weight += match.weight;
+                });
+        });
+
+        return distinct;
+    };
+
+    public getCloudSkills = (): Skill[] => {
+        const skills = this.getDistinctSkills();
+
+        let max_weight: number = skills.reduce(
+            (maxValue: number, skill: Skill): number => {
+                const weight: number = skill.weight;
+                return Math.max(maxValue, weight);
+            },
+            Number.MIN_SAFE_INTEGER
         );
 
+        skills.forEach((skill) => {
+            let ratio: number = Math.round((skill.weight / max_weight) * 6); // global ratio
+            skill.weight = ratio;
+        });
+
         return skills;
+    };
+}
+
+class HistoryDataServiceFactory {
+    public static GetHistoryDataService(
+        data: HistoryDataInterface = history_data
+    ) {
+        return new HistoryDataService(data);
     }
 }
 
-export { HistoryDataService };
+export { HistoryDataService, HistoryDataServiceFactory };

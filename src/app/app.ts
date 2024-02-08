@@ -1,24 +1,34 @@
-import { LanguageDataService } from "../services/LanguageDataService";
+import {
+    LanguageDataService,
+    LanguageDataServiceFactory,
+} from "../services/LanguageDataService";
 
 class Applicaiton {
-    static DEFAULT_LANGUAGE = "en-US";
+    public static readonly DEFAULT_CLIENT_LANGUAGE = "en-US";
 
-    language: string;
+    client_language: string;
     lang: LanguageDataService;
 
-    title: string = "Loading ...";
-    description: string = "";
-    tagline: string = "";
-    welcome: string = "";
+    title: string;
+    description: string;
+    welcome: string;
 
-    constructor(language: string = Applicaiton.DEFAULT_LANGUAGE) {
-        this.language = language;
-        this.lang = new LanguageDataService(language);
+    DateFormatter = {
+        month: "short",
+        year: "numeric",
+    };
 
-        this.title = this.lang.translate("title");
-        this.description = this.lang.translate("description");
-        this.tagline = this.lang.translate("tagline");
-        this.welcome = this.lang.translate("welcome");
+    constructor(lang: string = Applicaiton.DEFAULT_CLIENT_LANGUAGE) {
+        this.client_language = lang;
+        this.lang = LanguageDataServiceFactory.GetLanguageDataService();
+
+        this.title = this.lang.translate(
+            "Eric Miller - Full-Stack Engineer & People Leader"
+        );
+        this.description = this.lang.translate(
+            "Eric Miller is a Full-stack Engineer with over 20 years of experience driving success across diverse industries. He is a Proven leader with 10 years of experience in building high-performing teams, delivering complex projects, and exceeding business goals."
+        );
+        this.welcome = this.lang.translate("Hello");
     }
 }
 
