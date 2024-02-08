@@ -23,7 +23,7 @@ const AppHeader = () => {
                 {app.title}
             </h1>
             <div className="spacer flex-1"></div>
-            <div id="app-header-logo-wrapper" className="sm:hidden">
+            <div id="app-header-logo-wrapper" className="hidden">
                 <HeroImage id="app-header-small-logo" size={32} />
             </div>
         </header>
