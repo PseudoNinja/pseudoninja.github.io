@@ -18,10 +18,11 @@ const WorkHistory = () => {
                             <span className="role text-2xl">
                                 {work_item.title}
                             </span>
-                            <span className="where text-lg">
-                                {work_item.title}
-                            </span>
+                            
                         </h2>
+                        <span className="where text-lg">
+                                {work_item.where}
+                        </span>
                         <div className="date text-mako-700 mb-4">
                             <span className="date-start">
                                 {new Date(work_item.start).toLocaleDateString(
