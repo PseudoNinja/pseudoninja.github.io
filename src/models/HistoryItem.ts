@@ -10,6 +10,8 @@ export interface HistoryItemInterface {
     thumbnail_alt: string | null;
 }
 
+
+
 const BEGINNINGOFTIME: Date = new Date("09/15/2004");
 const TODAY: Date = new Date();
 
@@ -41,5 +43,7 @@ class HistoryItem {
         this.thumbnail_alt = data.thumbnail_alt;
     }
 }
+
+
 
 export default HistoryItem;

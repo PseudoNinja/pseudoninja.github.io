@@ -2,21 +2,24 @@ import history_data from "@data/history.json";
 
 import Skill from "@/models/Skill";
 import HistoryItem, { HistoryItemInterface } from "@/models/HistoryItem";
+import WorkHistoryItem, {
+    WorkHistoryItemInterface,
+} from "@/models/WorkHistoryItem";
 
 const BEGINNINGOFTIME: Date = new Date("09/15/2004");
 const TODAY: Date = new Date();
 
 interface HistoryDataInterface {
-    workHistory: HistoryItemInterface[];
+    workHistory: WorkHistoryItemInterface[];
     projects: HistoryItemInterface[];
 }
 
 class HistoryDataService {
-    work: HistoryItem[];
+    work: WorkHistoryItem[];
     projects: HistoryItem[];
 
     constructor(data: HistoryDataInterface) {
-        this.work = data.workHistory.map((w) => new HistoryItem(w));
+        this.work = data.workHistory.map((w) => new WorkHistoryItem(w));
         this.projects = data.projects.map((p) => new HistoryItem(p));
     }
 
