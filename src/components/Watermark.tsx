@@ -1,3 +1,5 @@
-export default function Watermark() {
-    return <div className="watermark"></div>
-}
+const Watermark = () => {
+    return <div className="watermark"></div>;
+};
+
+export default Watermark;

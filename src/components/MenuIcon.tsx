@@ -1,10 +1,9 @@
-const MenuIcon = ({ className = "", size = "24px" }) => {
+const MenuIcon = (props: { size: string }) => {
     return (
         <svg
             fill="#000000"
-            className={className}
-            height={size}
-            width={size}
+            height={props.size}
+            width={props.size}
             viewBox="0 0 297 297"
         >
             <g>
