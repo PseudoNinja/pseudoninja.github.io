@@ -19,7 +19,12 @@ const Button = (props: {
             }
         >
             {showIcon ? (
-                <Icon title={props.title + " Icon"} src={props.icon} alt="" />
+                <Icon
+                    title={props.title + " Icon"}
+                    src={props.icon}
+                    alt={"a button for " + props.title}
+                    size={props.size}
+                />
             ) : (
                 ""
             )}

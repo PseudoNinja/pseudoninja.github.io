@@ -5,21 +5,12 @@ import MenuButton from "./MenuButton";
 
 const AppNav = () => {
     return (
-        <div id="app-nav-container">
-        <MenuButton id="app-nav-button"
-        className="mx-4"
-        onClick={() => {
-            console.log("boop");
-            setShowMenu(!showMenu);
-        }}
-    />
-        <nav>
+        <nav id="app-nav" className="hidden flex flex-col sm:visible">
             <MenuItem title={app.lang.translate("Who I Am")} />
             <MenuItem title={app.lang.translate("What I Do")} />
             <MenuItem title={app.lang.translate("Where I Have Been")} />
             <MenuItem title={app.lang.translate("Things I Have Done")} />
         </nav>
-        </div>
     );
 };
 

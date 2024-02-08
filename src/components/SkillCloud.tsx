@@ -20,9 +20,8 @@ const colors = [
     "text-crimson-800",
 ];
 
-function textSizeByWeight(weight = 0) {
-    let size_key = Math.round(sizes.length * weight);
-    return "text-" + sizes[size_key];
+function textSizeByWeight(weight: number) {
+    return "text-" + sizes[weight];
 }
 
 function randomColor() {
@@ -42,8 +41,14 @@ const SkillCloud = () => {
                     let textColor = randomColor();
                     let className = "px-2 py-1 " + textSize + " " + textColor;
                     return (
-                        <li key={skill.title}>
-                            <span className={className}>{skill.title}</span>
+                        <li
+                            key={skill.title}
+                            className={className}
+                            data-weight={skill.weight}
+                            data-lastused={skill.lastUsed}
+                            data-lengthofuse={skill.lengthOfUse}
+                        >
+                            {skill.title}
                         </li>
                     );
                 })}

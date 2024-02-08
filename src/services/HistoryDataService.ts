@@ -73,17 +73,25 @@ class HistoryDataService {
                     skill.weight += match.weight;
                 });
         });
+
         return distinct;
     };
 
     public getCloudSkills = (): Skill[] => {
-        const skills = [...this.getDistinctSkills()]; // Create a shallow copy to avoid modifying the original array
+        const skills = this.getDistinctSkills();
 
-        // shuffle skils so they dont appear in the same order
-        for (let i = skills.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [skills[i], skills[j]] = [skills[j], skills[i]];
-        }
+        let max_weight: number = skills.reduce(
+            (maxValue: number, skill: Skill): number => {
+                const weight: number = skill.weight;
+                return Math.max(maxValue, weight);
+            },
+            Number.MIN_SAFE_INTEGER
+        );
+
+        skills.forEach((skill) => {
+            let ratio: number = Math.round((skill.weight / max_weight) * 6); // global ratio
+            skill.weight = ratio;
+        });
 
         return skills;
     };
