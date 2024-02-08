@@ -22,7 +22,7 @@ export default function ProjectHistory() {
                         <div className="date text-mako-700 mb-4">
                             <span className="date-start">
                                 {new Date(project.start).toLocaleDateString(
-                                    app.client_language,
+                                    app.locale,
                                     app.DateFormatter
                                 )}
                             </span>
@@ -42,7 +42,7 @@ export default function ProjectHistory() {
                                         ? new Date(
                                               project.end
                                           ).toLocaleDateString(
-                                              app.client_language,
+                                              app.locale,
                                               app.DateFormatter
                                           )
                                         : app.lang.translate("Present")}
