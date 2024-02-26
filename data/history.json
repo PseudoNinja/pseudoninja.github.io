@@ -250,6 +250,29 @@
     ],
     "projects": [
         {
+            "title": "RAM ONE Productions WordPress Site",
+            "description": "Custom WordPress theme and design for local author promoting his first book RAM ONE",
+            "start": "2024-02-15",
+            "end": null,
+            "skills": [
+                "Git",
+                "GitHub",
+                "GoDaddy",
+                "WordPress",
+                "PHP",
+                "JavaScript",
+                "Visual Studio Code",
+                "Logo Design",
+                "Vector Graphics",
+                "User Interface (UI) Design",
+                "User Experience (UX)",
+                "Social Media"
+            ],
+            "thumbnail_src": "",
+            "thumbnail_alt": "",
+            "link": "https://ramoneproductions.com"
+        },
+        {
             "title": "Python Image Conversion Script",
             "description": "I was contacted by a member of a local Historical Society with an issue regarding some image files they had created from scanned documents. The documents were scanned in 600 DPI large format TIFF, which took up approximately 29GB of storage. With their limited budget, It would be important to get the images compressed down to a reasonable size but still be usable. It would have taken weeks to manually convert or months to rescan all of the documents.  I wrote a multithreaded Python script that traversed the 29GB directory and identified images with a TIFF format. The script then converted them to a JPEG image file format reducing the overall file size by approximately 66%.",
             "start": "2024-01-10",
