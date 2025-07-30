@@ -303,13 +303,12 @@ export default function Home() {
                     <h2>Skills</h2>
                     <div className="skills-grid">
                         <span>.NET</span>
-                        <span>.NET C# (4.8/CORE/6/7/8)</span>
                         <span>AWS</span>
                         <span>Angular</span>
                         <span>AngularJS</span>
                         <span>Bootstrap</span>
                         <span>C#</span>
-                        <span>CSS/LESS/SASS</span>
+                        <span>CSS / LESS / SASS</span>
                         <span>Cloud Computing Services (GCS)</span>
                         <span>Cost Analysis</span>
                         <span>Critical Thinking</span>
