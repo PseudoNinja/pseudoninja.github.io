@@ -14,16 +14,24 @@ export default function Home() {
             {/* Header */}
             <header className="header">
                 <div className="header-content">
-                    <h1>Eric Miller</h1>
+                    <h1 className="site-title">Eric Miller</h1>
+                    {/* <button
+                        className="nav-toggle"
+                        aria-label="Toggle navigation"
+                    >
+                        ☰
+                    </button> */}
                     <nav>
-                        <Link href="#about">About</Link>
-                        <Link href="#experience">Experience</Link>
-                        <Link href="#education">Education</Link>
-                        <Link href="#skills">Skills</Link>
-                        <Link href="#certifications">Certifications</Link>
-                        <Link href="#activities">Activities</Link>
-                        <Link href="#projects">Projects</Link>
-                        <Link href="#contact">Contact</Link>
+                        <div className="nav-menu">
+                            <Link href="#about">About</Link>
+                            <Link href="#experience">Experience</Link>
+                            <Link href="#education">Education</Link>
+                            <Link href="#skills">Skills</Link>
+                            <Link href="#certifications">Certifications</Link>
+                            <Link href="#activities">Activities</Link>
+                            <Link href="#projects">Projects</Link>
+                            <Link href="#contact">Contact</Link>
+                        </div>
                     </nav>
                 </div>
             </header>
