@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
         unoptimized: true, // Required for next/image in static export
     },
     // Optional: Uncomment if deploying to a subdirectory (e.g., username.github.io/resume-site)
-    basePath: "/",
+    //  basePath: "/",
 };
 
 export default nextConfig;
