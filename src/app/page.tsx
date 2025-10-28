@@ -42,19 +42,11 @@ export default function Home() {
                 <section id="about" className="section">
                     <h2>About Me</h2>
                     <p>
-                        Eric Miller is a seasoned tech leader and full-stack
-                        engineer with over 20 years of experience driving
-                        impactful projects in finance, healthcare, and defense.
-                        Based in Omaha, NE, he’s led high-performing teams at
-                        places like A-S Medication Solutions and Moody’s
-                        Analytics, delivering complex software solutions using
-                        tools like .NET, React, AWS, and Azure while mastering
-                        Agile practices. Known for turning around critical
-                        initiatives, like a decade-delayed project at A-S, Eric
-                        blends strategic vision with hands-on expertise. Outside
-                        work, he’s a dedicated family man with two teenage kids,
-                        a Midwest native, and a passionate volunteer with Team
-                        Rubicon, aiding communities in crisis.
+                        Results-driven IT leader with over two decades of experience in software development, cyber intelligence, and strategic leadership, 
+                        specializing in full-stack development (.NET, C#, Python, React), cloud infrastructure (AWS, Azure), and Agile methodologies (Scrum, Kanban). 
+                        Proven track record leading distributed teams to deliver scalable SaaS solutions, reducing production bugs by 40% and enhancing efficiency 
+                        through CI/CD pipelines, DevSecOps practices, and incident response plans. Expert in AI, machine learning, and cybersecurity, 
+                        with a focus on innovation and cross-functional collaboration to drive digital transformation.
                     </p>
                     <a
                         href="/EricMiller-Resume.pdf"
